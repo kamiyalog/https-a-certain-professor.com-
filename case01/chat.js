@@ -96,6 +96,10 @@ function addImageBubble(src, alt = '送信画像', caption = '') {
   img.src = src;
   img.alt = alt;
   img.loading = 'lazy';
+  img.className = 'chat-photo';
+  img.addEventListener('click', () => {
+    openChatImageModal(src, alt, caption);
+  });
 
   div.appendChild(img);
 
@@ -203,6 +207,15 @@ function say(lines, done) {
     }
 
     bot(line);
+
+    // 最後の一文は、表示された時点で入力受付を再開する。
+    // これにより、エラー返答直後の次入力が無視される問題を防ぐ。
+    if (i >= arr.length) {
+      game.busy = false;
+      if (done) done();
+      return;
+    }
+
     setTimeout(next, delay);
   };
 
@@ -917,6 +930,10 @@ function restoreBubbles(bubbles) {
       img.src = item.src;
       img.alt = item.alt || '送信画像';
       img.loading = 'lazy';
+      img.className = 'chat-photo';
+      img.addEventListener('click', () => {
+        openChatImageModal(item.src, item.alt || '送信画像', item.caption || '');
+      });
       div.appendChild(img);
 
       if (item.caption) {
@@ -1029,5 +1046,59 @@ function showSaveToast(message) {
 
 document.addEventListener('DOMContentLoaded', () => {
   hideRouteDisplay();
+  setupChatImageModal();
 });
+
+
+/* =====================================================
+   Chat Image Modal
+   チャット画像クリック拡大
+===================================================== */
+
+function setupChatImageModal() {
+  if (document.getElementById('chatImageModal')) return;
+
+  const modal = document.createElement('div');
+  modal.id = 'chatImageModal';
+  modal.className = 'chat-image-modal';
+  modal.innerHTML = `
+    <button type="button" class="chat-image-modal-close" aria-label="閉じる">×</button>
+    <div class="chat-image-modal-inner">
+      <img id="chatImageModalImg" src="" alt="">
+      <p id="chatImageModalCaption"></p>
+    </div>
+  `;
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) closeChatImageModal();
+  });
+
+  modal.querySelector('.chat-image-modal-close').addEventListener('click', closeChatImageModal);
+
+  document.body.appendChild(modal);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeChatImageModal();
+  });
+}
+
+function openChatImageModal(src, alt = '送信画像', caption = '') {
+  setupChatImageModal();
+
+  const modal = document.getElementById('chatImageModal');
+  const img = document.getElementById('chatImageModalImg');
+  const cap = document.getElementById('chatImageModalCaption');
+
+  img.src = src;
+  img.alt = alt;
+  cap.textContent = caption || alt || '';
+
+  modal.classList.add('show');
+}
+
+function closeChatImageModal() {
+  const modal = document.getElementById('chatImageModal');
+  if (!modal) return;
+  modal.classList.remove('show');
+}
 

@@ -1404,3 +1404,65 @@ body {
     border-radius: 18px;
     box-shadow: 0 12px 30px rgba(0,0,0,.18);
 }
+/* =====================================================
+   Chat bug fix support / Image modal
+========================= */
+
+.chat-photo {
+    cursor: zoom-in;
+}
+
+.chat-image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0,0,0,.74);
+}
+
+.chat-image-modal.show {
+    display: flex;
+}
+
+.chat-image-modal-inner {
+    max-width: min(92vw, 980px);
+    max-height: 88vh;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+}
+
+.chat-image-modal-inner img {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 14px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.45);
+}
+
+.chat-image-modal-inner p {
+    margin: 0;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.chat-image-modal-close {
+    position: fixed;
+    top: 18px;
+    right: 22px;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255,255,255,.92);
+    color: #1d1d1d;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
