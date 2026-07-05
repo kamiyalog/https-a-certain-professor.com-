@@ -335,10 +335,10 @@ h3 {
 }
 
 .map-visual:before {
-    content:"園内マップ画像を assets/img/park_map.jpg に配置";
+    content: none !important;
     position:absolute;
     inset:0;
-    display:grid;
+    display: none !important;
     place-items:center;
     font-size:26px;
     font-weight:900;

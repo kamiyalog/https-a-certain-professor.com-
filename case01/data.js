@@ -171,7 +171,7 @@ const PAGES = {
     </section>`},
 
   map: { no:2, title:'園内マップ', body:`
-    <section class="page-title"><p class="eyebrow">PARK MAP</p><h1>園内マップ</h1><p>園内の各施設の位置をご確認いただけます。番号はアトラクション・施設一覧と対応しています。</p></section>
+    <section class="page-title"><p class="eyebrow">PARK MAP</p><h1>園内マップ</h1><p>園内の各施設の位置をご確認いただけます。<br>番号はアトラクション・施設一覧と対応しています。</p></section>
     <section class="map-section">
       <div class="map-visual" style="background-image:url('${IMG.map}')">
  
