@@ -510,7 +510,7 @@ function handleReady(text) {
 }
 
 function handleQuiz(text) {
-  if (text.includes('終了')) {
+  if (text.includes('終了','戻る')) {
     setRoute('Z9');
     return say(['おや、まだ調査が足りないかな？', 'よし、それではどこへ向かう？'], () => { game.waiting = 'destination'; });
   }
@@ -557,7 +557,7 @@ function handleQuiz(text) {
 
   if (game.waiting === 'quiz6') {
     if (['見張られていた', '見張り', 'ごまかす', '嘘', '監視'].some(w => text.includes(w))) {
-      return say(['なるほど…監視されていた…。', 'つまり、儀式を行っているように見せなければならなかった。', 'ということは、石碑を壊したのは…'], () => { game.waiting = 'quiz7'; });
+      return say(['なるほど…監視されていた…。', 'つまり、儀式を行っているように見せなければならなかった。', 'ということは、石碑を壊したのは…？'], () => { game.waiting = 'quiz7'; });
     }
     return say(WRONG_QUIZ);
   }
@@ -570,8 +570,8 @@ function handleQuiz(text) {
   }
 
   if (game.waiting === 'quiz8') {
-    if (['終わらせる', '壊す'].some(w => text.includes(w)) || text === '終') {
-      return say(['終わらせるため…か。', 'なるほど。', '何か要因がるみたいだね？', 'それにしても、\n丈一郎氏に行わさせていた連中は\n何が目的だったんだろうね', '昔の儀式を蘇らせることに、何か意図が…？', 'おっと、また脱線するところだった。すまない。', '帰ったら詳しく聞かせてほしい', 'それでは、また'], () => ending(2));
+    if (['終わらせる','終了','壊す'].some(w => text.includes(w)) || text === '終') {
+      return say(['終わらせるため…か。', 'なるほど。', '何か要因があるみたいだね？', 'それにしても、\n丈一郎氏に行わさせていた連中は\n何が目的だったんだろうね', '昔の儀式を蘇らせることに、何か意図が…？', 'おっと、また脱線するところだった。すまない。', '帰ったら詳しく聞かせてほしい', 'それでは、また'], () => ending(2));
     }
     return say(WRONG_QUIZ);
   }
@@ -585,7 +585,7 @@ function ending(no) {
     routeLabel.style.display = 'none';
   }
 
-  const NOTE_URL = 'ここにnoteのURL';
+  const NOTE_URL = 'https://note.com/mei_takanashi/n/n00ca86c3b240?app_launch=false';
 
   if (no === 1) {
 
@@ -594,7 +594,7 @@ function ending(no) {
       encodeURIComponent(
         '「あなたは、行われた儀式を暴きましたが、まだ秘密があるようです」\n' +
         'https://note.com/mei_takanashi/n/n00ca86c3b240?app_launch=false' +
-        '\n\n#ARG #ある廃遊園地と、ある教授'
+        '\n\n#ARG #ある廃遊園地とある教授'
       );
 
     renderPage({
@@ -637,7 +637,7 @@ Xでシェア
       encodeURIComponent(
         '「あなたは、この事件の真相にたどり着きました」\n' +
         'https://note.com/mei_takanashi/n/n00ca86c3b240?app_launch=false' +
-        '\n\n#ARG #ある廃遊園地と、ある教授'
+        '\n\n#ARG #ある廃遊園地とある教授'
       );
 
     renderPage({
