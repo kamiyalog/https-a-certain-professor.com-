@@ -136,7 +136,7 @@ const publicNews = [
 ];
 
 const PAGES = {
-  home: { no:1, title:'昔懐かしい遊園地で遊ぼう！', body:`
+  home: { no:1, title:'おおとり遊園地', body:`
     <section class="hero-visual">
       ${imageBox(IMG.hero, '画像：おおとり遊園地 正門と園内風景', 'hero-image')}
       <div class="hero-copy">
