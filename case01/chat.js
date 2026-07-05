@@ -580,7 +580,7 @@ function ending(no) {
       'https://twitter.com/intent/tweet?text=' +
       encodeURIComponent(
         '「あなたは、行われた儀式を暴きましたが、まだ秘密があるようです」\n' +
-        NOTE_URL +
+        https://note.com/mei_takanashi/n/n00ca86c3b240?app_launch=false +
         '\n\n#ARG #ある廃遊園地と、ある教授'
       );
 
@@ -623,7 +623,7 @@ Xでシェア
       'https://twitter.com/intent/tweet?text=' +
       encodeURIComponent(
         '「あなたは、この事件の真相にたどり着きました」\n' +
-        NOTE_URL +
+        https://note.com/mei_takanashi/n/n00ca86c3b240?app_launch=false +
         '\n\n#ARG #ある廃遊園地と、ある教授'
       );
 
