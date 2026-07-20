@@ -7,7 +7,7 @@
   <title>お知らせ｜南浜駅ポータル</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="34" data-root="../">
 <header class="site-header">
   <div class="rail-band"></div>
   <div class="header-inner">
@@ -110,13 +110,7 @@
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
-    <span>35/53</span>
-  </div>
-</footer>
-<div class="dummy-toast" id="dummyToast">このページは現在準備中です。</div>
+<script src="../common/js/footer.js"></script><div class="dummy-toast" id="dummyToast">このページは現在準備中です。</div>
 <script>
 document.querySelectorAll('.dummy-link').forEach(link => {
   link.addEventListener('click', e => {
