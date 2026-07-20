@@ -50,7 +50,7 @@ function createFooter(currentPage, totalPages) {
 
   const pageNumber = document.createElement("span");
   pageNumber.className = "fiction-footer__page";
-  pageNumber.textContent = `${currentPage}/66`;
+  pageNumber.textContent = `${currentPage}/65`;
 
   footer.append(notice, pageNumber);
   document.body.appendChild(footer);
