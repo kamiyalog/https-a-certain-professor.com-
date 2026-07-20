@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>関連リンク｜南浜駅ポータル</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="rail-band"></div>
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">東関</span>
+      <span>
+        <strong>南浜駅ポータル</strong>
+        <small>MINAMIHAMA STATION PORTAL</small>
+      </span>
+    </a>
+    <div class="station-code">
+      <span>駅番号</span>
+      <strong>TK-18</strong>
+    </div>
+  </div>
+  <nav class="global-nav">
+    <div class="nav-inner">
+      <a href="index.html">トップ</a>
+      <a class="dummy-link" href="#">時刻表</a>
+      <a class="dummy-link" href="#">構内図</a>
+      <a class="dummy-link" href="#">駅施設</a>
+      <a href="notice.html">お知らせ</a>
+      <a class="current" href="links.html">リンク</a>
+      <a class="dummy-link" href="#">周辺案内</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="page-title">
+    <div class="content-inner">
+      <p>RELATED LINKS</p>
+      <h1>関連リンク</h1>
+      <div class="breadcrumb">
+        <a href="index.html">トップ</a>
+        <span>›</span>
+        <span>関連リンク</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="links-page">
+    <div class="content-inner narrow">
+      <div class="links-intro">
+        <h2>鉄道・駅周辺の関連サイト</h2>
+        <p>南浜駅のご利用に関連する駅、地域施設、交通機関のWebサイトをご案内します。</p>
+      </div>
+
+      <div class="related-link-list">
+        <a class="related-link-card" href="../harumino-station-portal/index.html">
+          <span class="link-type">STATION</span>
+          <div>
+            <h2>春見野駅ポータルサイト</h2>
+            <p>春見野駅の時刻表、構内情報、駅からのお知らせをご覧いただけます。</p>
+          </div>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="related-link-card" href="../honmachi-shopping/index.html">
+          <span class="link-type">TOWN</span>
+          <div>
+            <h2>本町中央商店街</h2>
+            <p>店舗案内、地域行事、商店街からのお知らせをご覧いただけます。</p>
+          </div>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="related-link-card" href="../keno-airport/index.html">
+          <span class="link-type">AIRPORT</span>
+          <div>
+            <h2>県央空港</h2>
+            <p>フライト情報、館内施設、空港までのアクセスをご案内しています。</p>
+          </div>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+
+        <a class="related-link-card" href="../higashihama-railway/index.html">
+          <span class="link-type">RAILWAY</span>
+          <div>
+            <h2>東浜鉄道</h2>
+            <p>東浜鉄道の路線、乗換案内、運行情報をご確認いただけます。</p>
+          </div>
+          <span class="link-arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+
+      <div class="external-note">
+        <strong>リンク先について</strong>
+        <p>リンク先の情報やサービスについては、各サイトの運営者へお問い合わせください。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
+    <span>37/53</span>
+  </div>
+</footer>
+
+<div class="dummy-toast" id="dummyToast">このページは現在準備中です。</div>
+<script>
+document.querySelectorAll('.dummy-link').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const toast = document.getElementById('dummyToast');
+    toast.classList.add('show');
+    clearTimeout(window.toastTimer);
+    window.toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+  });
+});
+</script>
+</body>
+</html>

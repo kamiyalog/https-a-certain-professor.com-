@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>職員用ページ｜春見野駅</title>
+
+  <link rel="stylesheet" href="../css/employee-login.css">
+</head>
+
+<body data-page="5" data-root="../../">
+  <main class="login-page">
+    <section class="login-shell" aria-labelledby="login-title">
+      <div class="login-shell__header">
+        <div class="system-brand">
+          <span class="system-brand__mark" aria-hidden="true">TK</span>
+          <div>
+            <p>東関鉄道</p>
+            <strong>春見野駅 職員用ページ</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-shell__body">
+        <div class="login-intro">
+          <p class="login-intro__eyebrow">STAFF PORTAL</p>
+          <h1 id="login-title">職員ログイン</h1>
+          <p>
+            職員IDとパスワードを入力してください。
+            本システムは東関鉄道の職員専用です。
+          </p>
+        </div>
+
+        <form class="login-form" id="staff-login" novalidate>
+          <div class="form-field">
+            <label for="staff-id">職員ID</label>
+            <input
+              type="text"
+              id="staff-id"
+              name="staff-id"
+              inputmode="numeric"
+              autocomplete="username"
+              maxlength="8"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="staff-password">パスワード</label>
+            <input
+              type="password"
+              id="staff-password"
+              name="staff-password"
+              inputmode="numeric"
+              autocomplete="current-password"
+              maxlength="12"
+              required
+            >
+          </div>
+
+          <p class="login-message" id="login-message" aria-live="polite"></p>
+
+          <button type="submit" class="login-button">ログイン</button>
+        </form>
+
+        <div class="security-note">
+          <h2>ご利用上の注意</h2>
+          <ul>
+            <li>職員本人以外による利用を禁止します。</li>
+            <li>一定回数以上ログインに失敗した場合、アカウントが一時停止されることがあります。</li>
+            <li>共有端末をご利用の場合は、利用後に必ずログアウトしてください。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="login-shell__footer">
+        <a href="../index.html">春見野駅ポータルへ戻る</a>
+        <span>東関鉄道 情報管理室</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/employee-login.js"></script>
+  <script src="../../common/js/footer.js"></script>
+</body>
+</html>

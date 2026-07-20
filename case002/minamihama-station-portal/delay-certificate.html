@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>遅延証明書発行｜南浜駅ポータル</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="rail-band"></div>
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">東関</span>
+      <span><strong>南浜駅ポータル</strong><small>MINAMIHAMA STATION PORTAL</small></span>
+    </a>
+    <div class="station-code"><span>駅番号</span><strong>TK-18</strong></div>
+  </div>
+  <nav class="global-nav">
+    <div class="nav-inner">
+      <a href="index.html">トップ</a>
+      <a class="dummy-link" href="#">時刻表</a>
+      <a class="dummy-link" href="#">構内図</a>
+      <a class="dummy-link" href="#">駅施設</a>
+      <a href="notice.html">お知らせ</a>
+      <a href="links.html">リンク</a>
+      <a class="dummy-link" href="#">周辺案内</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="page-title">
+    <div class="content-inner">
+      <p>DELAY CERTIFICATE</p>
+      <h1>遅延証明書発行</h1>
+      <div class="breadcrumb"><a href="index.html">トップ</a><span>›</span><a href="notice.html">お知らせ</a><span>›</span><span>遅延証明書発行</span></div>
+    </div>
+  </div>
+
+  <section class="certificate-page">
+    <div class="content-inner certificate-width">
+      <div class="guide-box">
+        <h2>交通系ICカード番号を入力してください</h2>
+        <p>ご利用時の交通系ICカード裏面に記載された番号を、ハイフンを含めず入力してください。</p>
+      </div>
+
+      <form id="certificateForm" class="certificate-form" novalidate>
+        <label for="icNumber">交通系ICカード番号</label>
+        <div class="input-row">
+          <input id="icNumber" name="icNumber" type="text"  autocomplete="off" placeholder="例：F123456">
+          <button type="submit">利用履歴を検索</button>
+        </div>
+        <p class="form-error" id="formError" role="alert"></p>
+      </form>
+
+      <div id="noResult" class="result-panel no-result" hidden>
+        <h2>該当する利用履歴が見つかりませんでした</h2>
+        <p>入力した番号をご確認ください。他社線のみの利用履歴は表示できません。</p>
+      </div>
+
+      <div id="resultPanel" class="result-panel" hidden>
+        <div class="result-header">
+          <div>
+            <p>東関鉄道</p>
+            <h2>遅延証明書</h2>
+          </div>
+          <span>発行番号：MH-20260720-018</span>
+        </div>
+
+        <p class="certificate-copy">下記区間において列車の遅延が発生したことを証明します。</p>
+
+        <table class="result-table">
+          <tbody>
+            <tr><th>利用日</th><td>2026年7月20日</td></tr>
+            <tr><th>乗車駅</th><td>南浜駅</td></tr>
+            <tr><th>降車駅</th><td>県央空港駅</td></tr>
+            <tr><th>遅延時間</th><td>約20分</td></tr>
+            <tr><th>対象列車</th><td>南浜線　上り</td></tr>
+          </tbody>
+        </table>
+
+        <div class="certificate-footer">
+          <p>2026年7月20日</p>
+          <strong>東関鉄道株式会社</strong>
+        </div>
+
+        <button type="button" class="print-button" onclick="window.print()">この証明書を印刷する</button>
+      </div>
+
+      <div class="privacy-note">
+        <h2>ご利用にあたって</h2>
+        <ul>
+          <li>入力されたカード番号は、このページ内での照合にのみ使用されます。</li>
+          <li>遅延証明書は、列車の遅延時間を証明するものであり、個別の損害を証明するものではありません。</li>
+          <li>利用履歴の反映には時間がかかる場合があります。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
+    <span>36/53</span>
+  </div>
+</footer>
+<div class="dummy-toast" id="dummyToast">このページは現在準備中です。</div>
+<script>
+document.querySelectorAll('.dummy-link').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const toast = document.getElementById('dummyToast');
+    toast.classList.add('show');
+    clearTimeout(window.toastTimer);
+    window.toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+  });
+});
+</script>
+<script src="delay-certificate.js"></script>
+</body>
+</html>

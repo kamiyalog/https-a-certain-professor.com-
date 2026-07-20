@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+/* No.8 カード照会：ページ固有スタイル */
+
+.search-panel {
+  margin-bottom: 28px;
+  padding: 26px;
+  border: 1px solid #d9e0e7;
+  background: #ffffff;
+}
+
+.search-panel__heading {
+  margin-bottom: 20px;
+}
+
+.search-panel__heading h2 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  color: #18324a;
+}
+
+.search-panel__heading p {
+  margin: 0;
+  color: #5d6874;
+}
+
+.search-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.search-field {
+  flex: 1;
+}
+
+.search-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #263746;
+}
+
+.search-field input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid #aeb9c3;
+  border-radius: 2px;
+  background: #fff;
+  font: inherit;
+  letter-spacing: 0.05em;
+}
+
+.search-field input:focus {
+  outline: 3px solid rgba(21, 88, 132, 0.16);
+  border-color: #155884;
+}
+
+.search-button {
+  min-width: 120px;
+  min-height: 46px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 2px;
+  background: #155884;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #0e466c;
+}
+
+.search-message {
+  min-height: 1.5em;
+  margin: 14px 0 0;
+  color: #b42318;
+  font-weight: 700;
+}
+
+.result-section {
+  margin-bottom: 30px;
+}
+
+.result-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-left: 4px solid #155884;
+  background: #eef4f8;
+}
+
+.result-summary span {
+  color: #4d5b67;
+}
+
+.result-summary strong {
+  color: #18324a;
+}
+
+.card-status-box {
+  border: 1px solid #d5dde4;
+  background: #fff;
+}
+
+.card-status-box dl {
+  margin: 0;
+}
+
+.card-status-box dl > div {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  border-bottom: 1px solid #e0e5ea;
+}
+
+.card-status-box dt,
+.card-status-box dd {
+  margin: 0;
+  padding: 16px 18px;
+}
+
+.card-status-box dt {
+  background: #f3f6f8;
+  font-weight: 700;
+  color: #334655;
+}
+
+.card-status-box dd {
+  color: #1e2e3b;
+}
+
+.status-changed {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid #b85b00;
+  background: #fff4e8;
+  color: #934900;
+  font-weight: 700;
+}
+
+.new-card-id {
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.status-note {
+  margin: 0;
+  padding: 16px 18px;
+  background: #fff9ed;
+  color: #684f19;
+}
+
+.history-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #d5dde4;
+  background: #fff;
+}
+
+.history-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid #e0e5ea;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.history-table th {
+  background: #edf2f5;
+  color: #263746;
+  font-size: 0.92rem;
+}
+
+.history-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.history-table__latest {
+  background: #fff8e7;
+  font-weight: 700;
+}
+
+.system-note,
+.card-search-notes {
+  margin-top: 22px;
+  padding: 20px 22px;
+  border: 1px solid #d5dde4;
+  background: #f7f9fa;
+}
+
+.system-note h2,
+.card-search-notes h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  color: #18324a;
+}
+
+.system-note p {
+  margin: 0;
+  line-height: 1.8;
+  color: #465866;
+}
+
+.card-search-notes ul {
+  margin: 0;
+  padding-left: 1.4em;
+  color: #465866;
+  line-height: 1.85;
+}
+
+@media (max-width: 720px) {
+  .search-panel {
+    padding: 20px 16px;
+  }
+
+  .search-form {
+    display: block;
+  }
+
+  .search-button {
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .card-status-box dl > div {
+    display: block;
+  }
+
+  .card-status-box dt {
+    padding-bottom: 7px;
+  }
+
+  .card-status-box dd {
+    padding-top: 7px;
+  }
+}

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>お知らせ｜本町中央商店街</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .sub-hero{
+      padding:72px max(20px,calc((100% - 1220px)/2));
+      color:#fff;
+      background:linear-gradient(120deg,#0e1d31,#172b46 65%,#26476b);
+    }
+    .sub-hero small{
+      color:#c7a55a;
+      font-size:.7rem;
+      font-weight:900;
+      letter-spacing:.22em;
+    }
+    .sub-hero h1{
+      margin:8px 0 10px;
+      font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+      font-size:clamp(2.5rem,5vw,4.2rem);
+      font-weight:500;
+    }
+    .sub-hero p{
+      margin:0;
+      color:#d5dee7;
+    }
+    .breadcrumb{
+      padding:14px max(20px,calc((100% - 1220px)/2));
+      color:#6f7c87;
+      background:#f7f8fa;
+      border-bottom:1px solid #d9dee3;
+      font-size:.76rem;
+    }
+    .breadcrumb a{
+      color:#2c5b88;
+      text-decoration:none;
+    }
+    .news-layout{
+      display:grid;
+      grid-template-columns:1fr 300px;
+      gap:70px;
+      align-items:start;
+    }
+    .article-list{
+      border-top:2px solid #172b46;
+    }
+    .article{
+      padding:30px 4px;
+      border-bottom:1px solid #d9dee3;
+    }
+    .article-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      align-items:center;
+      margin-bottom:12px;
+    }
+    .article time{
+      color:#6f7c87;
+      font-size:.8rem;
+    }
+    .article-category{
+      padding:4px 9px;
+      color:#2c5b88;
+      border:1px solid #2c5b88;
+      font-size:.68rem;
+      line-height:1;
+    }
+    .article h2{
+      margin:0 0 14px;
+      color:#172b46;
+      font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+      font-size:1.45rem;
+      font-weight:500;
+    }
+    .article p{
+      margin:0;
+      color:#5f6c77;
+    }
+    .article-detail{
+      margin-top:17px;
+      padding:18px 20px;
+      background:#f7f8fa;
+      border-left:3px solid #c7a55a;
+    }
+    .article-detail dl{
+      margin:0;
+    }
+    .article-detail dl>div{
+      display:grid;
+      grid-template-columns:100px 1fr;
+      gap:16px;
+      padding:7px 0;
+    }
+    .article-detail dt{
+      color:#172b46;
+      font-weight:800;
+    }
+    .article-detail dd{
+      margin:0;
+      color:#5f6c77;
+    }
+    .chairman-box{
+      margin-top:20px;
+      padding:24px;
+      background:#f4f0e8;
+      border:1px solid #ded3bb;
+    }
+    .chairman-box small{
+      color:#c7a55a;
+      font-size:.65rem;
+      font-weight:900;
+      letter-spacing:.18em;
+    }
+    .chairman-box h3{
+      margin:5px 0 12px;
+      color:#172b46;
+      font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+      font-size:1.25rem;
+      font-weight:500;
+    }
+    .chairman-box p{
+      margin:0 0 10px;
+    }
+    .chairman-box dl{
+      margin:14px 0 0;
+      border-top:1px solid #d4c6a8;
+    }
+    .chairman-box dl>div{
+      display:grid;
+      grid-template-columns:110px 1fr;
+      gap:12px;
+      padding:9px 0;
+      border-bottom:1px solid #d4c6a8;
+    }
+    .chairman-box dt{
+      font-weight:800;
+      color:#172b46;
+    }
+    .chairman-box dd{
+      margin:0;
+      color:#5f6c77;
+    }
+    .sidebar{
+      position:sticky;
+      top:24px;
+    }
+    .side-box{
+      padding:24px;
+      border:1px solid #d9dee3;
+      background:#fff;
+      margin-bottom:20px;
+    }
+    .side-box h2{
+      margin:0 0 14px;
+      color:#172b46;
+      font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+      font-size:1.08rem;
+      font-weight:500;
+    }
+    .side-box a{
+      display:block;
+      padding:10px 0;
+      border-bottom:1px solid #e7eaed;
+      color:#2c5b88;
+      font-size:.82rem;
+      text-decoration:none;
+    }
+    .side-box a:last-child{
+      border-bottom:0;
+    }
+    .archive-list{
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .archive-list li{
+      padding:8px 0;
+      color:#6f7c87;
+      border-bottom:1px solid #e7eaed;
+      font-size:.82rem;
+    }
+    .archive-list li:last-child{
+      border-bottom:0;
+    }
+    @media(max-width:850px){
+      .news-layout{
+        grid-template-columns:1fr;
+      }
+      .sidebar{
+        position:static;
+      }
+    }
+    @media(max-width:600px){
+      .article-detail dl>div,
+      .chairman-box dl>div{
+        grid-template-columns:1fr;
+        gap:2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">本</span>
+        <span class="brand-copy">
+          <strong>本町中央商店街</strong>
+          <small>HONMACHI CHUO SHOPPING STREET</small>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav">
+        MENU
+      </button>
+
+      <nav id="global-nav" class="global-nav">
+        <a href="index.html#about">商店街について</a>
+        <a href="index.html#guide">店舗案内</a>
+        <a href="news.html">お知らせ</a>
+        <a href="links.html">リンク</a>
+        <a href="index.html#access">アクセス</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="sub-hero">
+      <small>NEWS &amp; INFORMATION</small>
+      <h1>商店街からのお知らせ</h1>
+      <p>催し、加盟店情報、商店街活動などをご案内します。</p>
+    </section>
+
+    <div class="breadcrumb">
+      <a href="index.html">トップ</a> ／ お知らせ
+    </div>
+
+    <section class="section news-layout">
+      <div class="article-list">
+        <article id="summer-project" class="article">
+          <div class="article-meta">
+            <time datetime="2026-07-14">2026.07.14</time>
+            <span class="article-category">イベント</span>
+          </div>
+          <h2>夏季の商店街共同企画について</h2>
+          <p>
+            8月1日から31日まで、加盟店合同の夏季スタンプ企画を実施します。
+            詳細は各参加店舗の店頭掲示をご確認ください。
+          </p>
+        </article>
+
+        <article id="cleanup" class="article">
+          <div class="article-meta">
+            <time datetime="2026-07-01">2026.07.01</time>
+            <span class="article-category">活動報告</span>
+          </div>
+          <h2>中心通りの合同清掃を実施しました</h2>
+          <p>
+            加盟店および地域ボランティアの皆さまと、中心通り周辺の合同清掃を行いました。
+            ご参加いただいた皆さまに御礼申し上げます。
+          </p>
+        </article>
+
+        <article id="business-hours" class="article">
+          <div class="article-meta">
+            <time datetime="2026-06-20">2026.06.20</time>
+            <span class="article-category">店舗情報</span>
+          </div>
+          <h2>加盟店の営業情報を更新しました</h2>
+          <p>
+            一部加盟店の営業時間および定休日が変更されています。
+            ご来店前に各店舗へご確認ください。
+          </p>
+        </article>
+
+        <article id="annual-party" class="article">
+          <div class="article-meta">
+            <time datetime="2026-06-08">2026.06.08</time>
+            <span class="article-category">会員向け</span>
+          </div>
+          <h2>令和8年度 商店会親睦会の開催について</h2>
+          <p>
+            加盟店相互の交流を目的とした親睦会を、下記の日程で開催します。
+            本年度は例年の懇親会に加え、商店会長の誕生日祝いも兼ねて実施する予定です。
+          </p>
+          <div class="article-detail">
+            <dl>
+              <div>
+                <dt>開催日</dt>
+                <dd>2026年10月25日（日）</dd>
+              </div>
+              <div>
+                <dt>開始時刻</dt>
+                <dd>18時30分</dd>
+              </div>
+              <div>
+                <dt>会場</dt>
+                <dd>本町中央会館 2階大広間</dd>
+              </div>
+              <div>
+                <dt>対象</dt>
+                <dd>本町中央商店街 加盟店関係者</dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+
+        <article id="chairman-profile" class="article">
+          <div class="article-meta">
+            <time datetime="2026-05-18">2026.05.18</time>
+            <span class="article-category">商店会情報</span>
+          </div>
+          <h2>商店会長のご紹介</h2>
+          <p>
+            本年度も引き続き、本町中央商店街の運営および地域活動を代表して、
+            下記会長が務めます。
+          </p>
+
+          <div class="chairman-box">
+            <small>CHAIRMAN PROFILE</small>
+            <h3>本町中央商店街 会長</h3>
+            <p>
+              商店街の発足時から続く運営方針を受け継ぎ、
+              加盟店の連携強化と地域交流の促進に取り組んでいます。
+            </p>
+            <dl>
+              <div>
+                <dt>役職</dt>
+                <dd>本町中央商店街 会長</dd>
+              </div>
+              <div>
+                <dt>会員番号</dt>
+                <dd>10001</dd>
+              </div>
+              <div>
+                <dt>備考</dt>
+                <dd>
+                  会長会員番号は商店街発足時に登録された番号を、
+                  歴代会長が引き継いで使用しています。
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+
+        <article id="patrol" class="article">
+          <div class="article-meta">
+            <time datetime="2026-05-02">2026.05.02</time>
+            <span class="article-category">活動報告</span>
+          </div>
+          <h2>春季防犯パトロールを実施しました</h2>
+          <p>
+            本町中央駅周辺および商店街通りにて、春季防犯パトロールを実施しました。
+            今後も安心して利用できる環境づくりに努めてまいります。
+          </p>
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <section class="side-box">
+          <h2>お知らせカテゴリー</h2>
+          <a href="#summer-project">イベント</a>
+          <a href="#cleanup">活動報告</a>
+          <a href="#business-hours">店舗情報</a>
+          <a href="#annual-party">会員向け</a>
+          <a href="#chairman-profile">商店会情報</a>
+        </section>
+
+        <section class="side-box">
+          <h2>月別アーカイブ</h2>
+          <ul class="archive-list">
+            <li>2026年7月</li>
+            <li>2026年6月</li>
+            <li>2026年5月</li>
+            <li>2026年4月</li>
+          </ul>
+        </section>
+
+        <section class="side-box">
+          <h2>関連ページ</h2>
+          <a href="index.html">商店街トップ</a>
+          <a href="links.html">関連リンク</a>
+          <a href="admin/index.html">運営用サイト</a>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <strong>本町中央商店街</strong>
+        <small>HONMACHI CHUO SHOPPING STREET</small>
+      </div>
+      <nav>
+        <a href="index.html#about">商店街について</a>
+        <a href="index.html#guide">店舗案内</a>
+        <a href="news.html">お知らせ</a>
+        <a href="links.html">リンク</a>
+        <a href="index.html#access">アクセス</a>
+      </nav>
+    </div>
+    <div class="fiction-footer">
+      <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
+      <span>17/53</span>
+    </div>
+  </footer>
+
+  <script>
+    const button = document.querySelector(".menu-button");
+    const nav = document.querySelector(".global-nav");
+
+    button.addEventListener("click", () => {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!isOpen));
+      nav.classList.toggle("is-open", !isOpen);
+    });
+  </script>
+</body>
+</html>

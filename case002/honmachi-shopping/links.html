@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>関連リンク｜本町中央商店街</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/links.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">本</span>
+        <span class="brand-copy">
+          <strong>本町中央商店街</strong>
+          <small>HONMACHI CHUO SHOPPING STREET</small>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav">
+        MENU
+      </button>
+
+      <nav id="global-nav" class="global-nav">
+        <a href="index.html#about">商店街について</a>
+        <a href="index.html#guide">店舗案内</a>
+        <a href="news.html">お知らせ</a>
+        <a href="links.html">リンク</a>
+        <a href="index.html#access">アクセス</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="sub-hero">
+      <small>REGIONAL LINKS</small>
+      <h1>地域の関連施設・団体</h1>
+      <p>
+        本町中央商店街と関わりのある交通機関、地域施設、企業の
+        ウェブサイトをご案内します。
+      </p>
+    </section>
+
+    <div class="breadcrumb">
+      <a href="index.html">トップ</a> ／ 関連リンク
+    </div>
+
+    <section class="section links-layout">
+      <div>
+        <div class="section-title">
+          <span>LINK DIRECTORY</span>
+          <h2>関連リンク一覧</h2>
+        </div>
+
+        <p class="links-intro">
+          各団体の詳しい情報は、以下のウェブサイトからご確認ください。
+        </p>
+
+        <div class="link-list">
+          <a class="link-card" href="../harumino-station-portal/index.html">
+            <span class="link-symbol" aria-hidden="true">駅</span>
+            <div class="link-copy">
+              <small>STATION PORTAL</small>
+              <h2>春見野駅ポータル</h2>
+              <p>
+                春見野駅周辺の施設案内、運行情報、地域情報などを
+                掲載しています。
+              </p>
+            </div>
+            <i class="link-arrow" aria-hidden="true">→</i>
+          </a>
+
+          <a class="link-card" href="../komyoji/index.html">
+            <span class="link-symbol" aria-hidden="true">寺</span>
+            <div class="link-copy">
+              <small>TEMPLE</small>
+              <h2>光明寺</h2>
+              <p>
+                地域で長く親しまれている寺院です。
+                年間行事や寺院からのお知らせをご案内しています。
+              </p>
+            </div>
+            <i class="link-arrow" aria-hidden="true">→</i>
+          </a>
+
+          <a class="link-card" href="../higashihama-trading/index.html">
+            <span class="link-symbol" aria-hidden="true">商</span>
+            <div class="link-copy">
+              <small>LOCAL COMPANY</small>
+              <h2>東浜商会</h2>
+              <p>
+                物流、設備管理、地域事業支援などを行う企業の
+                ウェブサイトです。
+              </p>
+            </div>
+            <i class="link-arrow" aria-hidden="true">→</i>
+          </a>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <section class="side-box">
+          <h2>関連リンク</h2>
+          <a href="../harumino-station-portal/index.html">春見野駅ポータル</a>
+          <a href="../komyoji/index.html">光明寺</a>
+          <a href="../higashihama-trading/index.html">東浜商会</a>
+        </section>
+
+        <section class="side-box">
+          <h2>商店街について</h2>
+          <a href="index.html#about">商店街について</a>
+          <a href="news.html">商店街からのお知らせ</a>
+          <a href="index.html#access">アクセス</a>
+        </section>
+
+        <section class="side-box">
+          <h2>リンクについて</h2>
+          <p class="side-note">
+            掲載先の内容および運営については、各団体へ直接お問い合わせください。
+          </p>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <strong>本町中央商店街</strong>
+        <small>HONMACHI CHUO SHOPPING STREET</small>
+      </div>
+      <nav>
+        <a href="index.html#about">商店街について</a>
+        <a href="index.html#guide">店舗案内</a>
+        <a href="news.html">お知らせ</a>
+        <a href="links.html">リンク</a>
+        <a href="index.html#access">アクセス</a>
+      </nav>
+    </div>
+
+    <div class="fiction-footer">
+      <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
+      <span>18/53</span>
+    </div>
+  </footer>
+
+  <script>
+    const button = document.querySelector(".menu-button");
+    const nav = document.querySelector(".global-nav");
+
+    button.addEventListener("click", () => {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!isOpen));
+      nav.classList.toggle("is-open", !isOpen);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+:root {
+  --navy: #17344a;
+  --navy-deep: #0f2638;
+  --blue: #2c668a;
+  --line: #cfd9df;
+  --text: #24333d;
+  --muted: #687782;
+  --bg: #edf1f4;
+  --error: #a53434;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 31px,
+      rgba(34, 67, 88, 0.035) 31px,
+      rgba(34, 67, 88, 0.035) 32px
+    ),
+    var(--bg);
+  color: var(--text);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
+}
+
+.login-page {
+  flex: 1;
+  width: min(calc(100% - 32px), 760px);
+  margin: 0 auto;
+  padding: 64px 0 72px;
+  display: flex;
+  align-items: center;
+}
+
+.login-shell {
+  width: 100%;
+  border: 1px solid #c4d0d8;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(31, 56, 72, 0.12);
+}
+
+.login-shell__header {
+  padding: 22px 28px;
+  border-bottom: 4px solid var(--blue);
+  background: var(--navy-deep);
+  color: #fff;
+}
+
+.system-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.system-brand__mark {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(255,255,255,0.85);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.system-brand p {
+  margin: 0 0 2px;
+  color: #bed0dc;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.system-brand strong {
+  font-size: 20px;
+}
+
+.login-shell__body {
+  padding: 38px 42px 40px;
+}
+
+.login-intro {
+  margin-bottom: 28px;
+}
+
+.login-intro__eyebrow {
+  margin: 0 0 7px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.login-intro h1 {
+  margin: 0;
+  color: var(--navy-deep);
+  font-size: 30px;
+}
+
+.login-intro > p:last-child {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.login-form {
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: #f8fafb;
+}
+
+.form-field + .form-field {
+  margin-top: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--navy-deep);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #afbec8;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+}
+
+.form-field input:focus {
+  outline: 3px solid rgba(44, 102, 138, 0.18);
+  border-color: var(--blue);
+}
+
+.login-message {
+  min-height: 22px;
+  margin: 14px 0 0;
+  color: var(--error);
+  font-size: 12px;
+}
+
+.login-message.is-success {
+  color: #216847;
+}
+
+.login-button {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 6px;
+  border: 0;
+  background: var(--navy);
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: #204b69;
+}
+
+.login-button:focus-visible {
+  outline: 3px solid rgba(44, 102, 138, 0.3);
+  outline-offset: 2px;
+}
+
+.security-note {
+  margin-top: 28px;
+  padding: 22px 24px;
+  border-left: 4px solid #8299a8;
+  background: #f2f5f7;
+}
+
+.security-note h2 {
+  margin: 0 0 10px;
+  color: var(--navy-deep);
+  font-size: 15px;
+}
+
+.security-note ul {
+  margin: 0;
+  padding-left: 1.35em;
+  color: #5e6d76;
+  font-size: 12px;
+}
+
+.security-note li + li {
+  margin-top: 5px;
+}
+
+.login-shell__footer {
+  min-height: 54px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  background: #f7f9fa;
+  color: #6c7b84;
+  font-size: 11px;
+}
+
+.login-shell__footer a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.login-shell__footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 560px) {
+  .login-page {
+    width: min(calc(100% - 20px), 760px);
+    padding: 28px 0 42px;
+    align-items: flex-start;
+  }
+
+  .login-shell__header {
+    padding: 18px 20px;
+  }
+
+  .system-brand strong {
+    font-size: 17px;
+  }
+
+  .login-shell__body {
+    padding: 28px 20px 30px;
+  }
+
+  .login-form {
+    padding: 22px 18px;
+  }
+
+  .login-shell__footer {
+    padding: 14px 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

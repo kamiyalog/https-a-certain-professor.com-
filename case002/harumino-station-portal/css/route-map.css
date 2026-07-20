@@ -1,0 +1,369 @@
+@charset "UTF-8";
+
+.page-title {
+  padding: 58px 0 50px;
+  background: #eef3f6;
+  border-bottom: 1px solid #d7e0e6;
+}
+
+.page-title p {
+  margin: 0 0 8px;
+  color: #215c84;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.page-title h1 {
+  margin: 0;
+  color: #0b2235;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.page-title span {
+  display: block;
+  margin-top: 12px;
+  color: #667682;
+  font-size: 14px;
+}
+
+.breadcrumb {
+  border-bottom: 1px solid #e1e7eb;
+  background: #fff;
+}
+
+.breadcrumb .section-inner {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6a7984;
+  font-size: 12px;
+}
+
+.breadcrumb a {
+  color: #215c84;
+  text-decoration: none;
+}
+
+.route-section,
+.fare-section {
+  padding: 76px 0;
+}
+
+.route-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.route-heading h2 {
+  margin: 0;
+  color: #0b2235;
+  font-size: 30px;
+}
+
+.route-key {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #465762;
+  font-size: 13px;
+}
+
+.route-key__line {
+  width: 42px;
+  height: 6px;
+  border-radius: 999px;
+  background: #2a6f8d;
+}
+
+.route-note {
+  margin: 22px 0 30px;
+  color: #52636e;
+  font-size: 14px;
+}
+
+.route-map-wrapper {
+  overflow: hidden;
+  border: 1px solid #d6e0e6;
+  background:
+    linear-gradient(rgba(231, 238, 242, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(231, 238, 242, 0.45) 1px, transparent 1px),
+    #fff;
+  background-size: 28px 28px;
+}
+
+.route-map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.loop-line {
+  fill: none;
+  stroke: #2a6f8d;
+  stroke-width: 18;
+}
+
+.station text,
+.map-center text,
+.direction text {
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
+.station circle {
+  fill: #fff;
+  stroke: #174b66;
+  stroke-width: 5;
+}
+
+.station--origin circle {
+  fill: #12304a;
+  stroke: #fff;
+  stroke-width: 5;
+}
+
+
+.station-name,
+.fare {
+  fill: #263944;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fare {
+  fill: #63747e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.station-name--left,
+.fare--left {
+  text-anchor: end;
+}
+
+.station-name--top,
+.fare--top,
+.station-name--bottom,
+.fare--bottom {
+  text-anchor: middle;
+}
+
+.station--origin .station-name,
+.station--origin .fare {
+  fill: #0b2235;
+}
+
+.map-center text {
+  text-anchor: middle;
+  fill: #61727d;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
+  font-size: 17px;
+}
+
+.map-center .map-center__main {
+  fill: #12304a;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.map-center .map-center__sub {
+  fill: #768791;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.direction path {
+  fill: none;
+  stroke: #6b8998;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.direction polygon {
+  fill: #6b8998;
+}
+
+.direction text {
+  fill: #5f7480;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.map-caption {
+  margin: 14px 0 0;
+  color: #6c7b84;
+  font-size: 11px;
+}
+
+.fare-section {
+  background: #f3f6f8;
+}
+
+.fare-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #cfdae0;
+  background: #fff;
+}
+
+.fare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+
+.fare-table th,
+.fare-table td {
+  padding: 17px 20px;
+  border-bottom: 1px solid #dce4e9;
+  text-align: left;
+}
+
+.fare-table thead th {
+  background: #12304a;
+  color: #fff;
+  font-size: 13px;
+}
+
+.fare-table tbody th {
+  width: 160px;
+  color: #12304a;
+  font-size: 17px;
+}
+
+.fare-table tbody td {
+  color: #354650;
+  font-size: 14px;
+}
+
+.fare-table tbody tr:last-child th,
+.fare-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+.fare-notes {
+  margin-top: 28px;
+  padding: 24px 28px;
+  border-left: 4px solid #2a6f8d;
+  background: #fff;
+}
+
+.fare-notes h3 {
+  margin: 0 0 12px;
+  color: #12304a;
+  font-size: 17px;
+}
+
+.fare-notes ul {
+  margin: 0;
+  padding-left: 1.4em;
+  color: #53646e;
+  font-size: 13px;
+}
+
+.fare-notes li + li {
+  margin-top: 6px;
+}
+
+.page-navigation {
+  padding: 0 0 70px;
+  background: #f3f6f8;
+}
+
+.page-navigation a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #215c84;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.page-navigation a::before {
+  content: "‹";
+  font-size: 20px;
+}
+
+.page-navigation a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .route-heading {
+    align-items: flex-start;
+  }
+
+  .route-map-wrapper {
+    overflow-x: auto;
+  }
+
+  .route-map {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-title {
+    padding: 44px 0 38px;
+  }
+
+  .route-section,
+  .fare-section {
+    padding: 56px 0;
+  }
+
+  .route-heading {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .route-heading h2 {
+    font-size: 25px;
+  }
+
+  .route-map {
+    min-width: 700px;
+  }
+
+  .fare-table th,
+  .fare-table td {
+    padding: 14px 16px;
+  }
+
+  .fare-notes {
+    padding: 20px;
+  }
+}

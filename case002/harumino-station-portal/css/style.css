@@ -1,0 +1,779 @@
+@charset "UTF-8";
+
+:root{
+  --navy:#172b46;
+  --navy-deep:#0e1d31;
+  --blue:#2c5b88;
+  --gold:#c7a55a;
+  --cream:#f4f0e8;
+  --light:#f7f8fa;
+  --text:#263746;
+  --muted:#6f7c87;
+  --line:#d9dee3;
+  --white:#ffffff;
+  --black:#050505;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  background:var(--white);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.75;
+}
+a{color:inherit}
+button{font:inherit}
+
+.site-header{
+  position:relative;
+  z-index:20;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  width:min(1220px,calc(100% - 40px));
+  min-height:92px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:38px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+}
+.brand-mark{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:var(--navy);
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:1.45rem;
+}
+.brand-copy strong,
+.brand-copy small{display:block}
+.brand-copy strong{
+  color:var(--navy);
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:1.25rem;
+  letter-spacing:.08em;
+}
+.brand-copy small{
+  color:var(--muted);
+  font-size:.54rem;
+  letter-spacing:.14em;
+}
+.global-nav{
+  margin-left:auto;
+  display:flex;
+  gap:25px;
+}
+.global-nav a{
+  position:relative;
+  padding:33px 0 29px;
+  color:var(--navy);
+  font-size:.82rem;
+  font-weight:700;
+  text-decoration:none;
+}
+.global-nav a::after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:24px;
+  left:0;
+  height:2px;
+  background:var(--gold);
+  transform:scaleX(0);
+  transition:.2s;
+}
+.global-nav a:hover::after{transform:scaleX(1)}
+.menu-button{display:none}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:linear-gradient(120deg,var(--navy-deep),var(--navy) 60%,#26476b);
+}
+.hero-grid{
+  position:absolute;
+  inset:0;
+  opacity:.16;
+  background-image:
+    linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);
+  background-size:42px 42px;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  top:-160px;
+  right:-100px;
+  width:500px;
+  height:500px;
+  border:1px solid rgba(199,165,90,.35);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 70px rgba(199,165,90,.05),
+    0 0 0 140px rgba(199,165,90,.035);
+}
+.hero-inner{
+  position:relative;
+  z-index:2;
+  width:min(1220px,calc(100% - 40px));
+  min-height:620px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 430px;
+  align-items:center;
+  gap:90px;
+  padding:90px 0;
+}
+.hero-kicker{
+  margin:0 0 15px;
+  color:var(--gold);
+  font-size:.74rem;
+  font-weight:800;
+  letter-spacing:.23em;
+}
+.hero h1{
+  margin:0 0 25px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(3.2rem,6vw,5.5rem);
+  font-weight:500;
+  line-height:1.25;
+  letter-spacing:.045em;
+}
+.hero-lead{
+  max-width:600px;
+  margin:0 0 35px;
+  color:#d7e0e9;
+  font-size:1rem;
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+.button{
+  display:inline-block;
+  padding:13px 24px;
+  text-decoration:none;
+  font-size:.84rem;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+.button--primary{
+  color:var(--navy);
+  background:var(--gold);
+}
+.button--outline{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.55);
+}
+.button--dark{
+  color:#fff;
+  background:var(--navy);
+}
+.hero-panel{
+  position:relative;
+  padding:38px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(6px);
+}
+.hero-panel::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:68px;
+  height:4px;
+  background:var(--gold);
+}
+.hero-panel__label{
+  display:block;
+  margin-bottom:18px;
+  color:var(--gold);
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.2em;
+}
+.hero-panel strong{
+  display:block;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:1.75rem;
+  font-weight:500;
+  line-height:1.55;
+}
+.hero-panel p{
+  margin:18px 0 25px;
+  color:#d5dee7;
+  font-size:.88rem;
+}
+.hero-panel dl{
+  margin:0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-top:1px solid rgba(255,255,255,.2);
+}
+.hero-panel dl>div{
+  padding:18px 0 0;
+}
+.hero-panel dt{
+  color:#aebdcb;
+  font-size:.7rem;
+}
+.hero-panel dd{
+  margin:2px 0 0;
+  color:#fff;
+  font-size:1.12rem;
+  font-weight:700;
+}
+
+.quick-links{
+  width:min(1220px,calc(100% - 40px));
+  margin:-45px auto 0;
+  position:relative;
+  z-index:5;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  box-shadow:0 16px 35px rgba(20,40,62,.12);
+}
+.quick-links a{
+  min-height:175px;
+  display:grid;
+  grid-template-columns:45px 1fr 20px;
+  gap:18px;
+  align-items:center;
+  padding:26px;
+  background:#fff;
+  border-right:1px solid var(--line);
+  text-decoration:none;
+  transition:.2s;
+}
+.quick-links a:last-child{border-right:0}
+.quick-links a:hover{
+  transform:translateY(-4px);
+  background:#fbfaf6;
+}
+.quick-links>a>span{
+  color:var(--gold);
+  font-size:.8rem;
+  font-weight:800;
+}
+.quick-links small{
+  color:var(--muted);
+  font-size:.64rem;
+  font-weight:800;
+  letter-spacing:.17em;
+}
+.quick-links strong{
+  display:block;
+  margin:3px 0;
+  color:var(--navy);
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:1.08rem;
+}
+.quick-links p{
+  margin:0;
+  color:var(--muted);
+  font-size:.78rem;
+}
+.quick-links i{
+  color:var(--gold);
+  font-style:normal;
+  font-size:1.2rem;
+}
+
+.section{
+  padding:95px max(20px,calc((100% - 1220px)/2));
+}
+.section-title{
+  margin-bottom:42px;
+}
+.section-title span{
+  color:var(--gold);
+  font-size:.7rem;
+  font-weight:900;
+  letter-spacing:.22em;
+}
+.section-title h2{
+  margin:5px 0 0;
+  color:var(--navy);
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:500;
+}
+.section-title--light h2{color:#fff}
+
+.about{
+  background:#fff;
+}
+.about-layout{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:85px;
+  align-items:center;
+}
+.about-number{
+  padding:35px;
+  color:#fff;
+  background:var(--navy);
+  text-align:center;
+}
+.about-number span{
+  display:block;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:5rem;
+  line-height:1;
+}
+.about-number p{
+  margin:12px 0 0;
+  font-size:.85rem;
+}
+.about-copy{
+  max-width:680px;
+  color:#5c6974;
+}
+.about-copy p:first-child{margin-top:0}
+
+.guide{
+  color:#fff;
+  background:var(--navy-deep);
+}
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.category-grid article{
+  min-height:300px;
+  padding:30px 24px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.055);
+}
+.category-icon{
+  width:64px;
+  height:64px;
+  display:grid;
+  place-items:center;
+  margin-bottom:28px;
+  color:var(--navy);
+  background:var(--gold);
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:1.4rem;
+}
+.category-grid small{
+  color:#9badbf;
+  font-size:.62rem;
+  font-weight:800;
+  letter-spacing:.15em;
+}
+.category-grid h3{
+  margin:6px 0 10px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:1.3rem;
+  font-weight:500;
+}
+.category-grid p{
+  margin:0;
+  color:#c6d0d9;
+  font-size:.82rem;
+}
+
+.feature{
+  background:var(--cream);
+}
+.feature-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:420px;
+  background:#fff;
+  box-shadow:0 16px 35px rgba(21,40,62,.08);
+}
+.feature-copy{
+  padding:60px;
+}
+.feature-copy>span{
+  color:var(--gold);
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:.2em;
+}
+.feature-copy h2{
+  margin:8px 0 20px;
+  color:var(--navy);
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:2.2rem;
+  font-weight:500;
+  line-height:1.5;
+}
+.feature-copy p{
+  color:var(--muted);
+}
+.feature-copy a{
+  display:inline-block;
+  margin-top:12px;
+  color:var(--blue);
+  font-weight:800;
+  text-decoration:none;
+}
+.feature-visual{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(#dce7f0 0 55%,#b5bdc5 55%);
+}
+.building{
+  position:absolute;
+  bottom:78px;
+  border-top:10px solid var(--navy);
+  background:#fff;
+  box-shadow:inset 0 -22px 0 #e7ebee;
+}
+.building::before{
+  content:"";
+  position:absolute;
+  inset:22px 18px auto;
+  height:95px;
+  background:
+    repeating-linear-gradient(90deg,var(--blue) 0 24px,transparent 24px 38px),
+    repeating-linear-gradient(0deg,transparent 0 34px,#d6dee5 34px 38px);
+  opacity:.75;
+}
+.building--one{
+  left:8%;
+  width:28%;
+  height:190px;
+}
+.building--two{
+  left:38%;
+  width:30%;
+  height:245px;
+}
+.building--three{
+  right:5%;
+  width:24%;
+  height:165px;
+}
+.street-line{
+  position:absolute;
+  right:-10%;
+  bottom:33px;
+  left:-10%;
+  height:5px;
+  background:#fff;
+  transform:rotate(-3deg);
+}
+
+.news-preview{
+  background:#fff;
+}
+.news-list{
+  border-top:2px solid var(--navy);
+}
+.news-list a{
+  display:grid;
+  grid-template-columns:130px 100px 1fr 25px;
+  gap:22px;
+  align-items:center;
+  padding:21px 8px;
+  border-bottom:1px solid var(--line);
+  text-decoration:none;
+}
+.news-list time{
+  color:var(--muted);
+  font-size:.8rem;
+}
+.news-list span{
+  padding:4px 8px;
+  color:var(--blue);
+  border:1px solid var(--blue);
+  text-align:center;
+  font-size:.68rem;
+}
+.news-list strong{
+  color:var(--text);
+  font-size:.9rem;
+}
+.news-list i{
+  color:var(--gold);
+  font-style:normal;
+}
+.news-more{
+  margin-top:30px;
+  text-align:right;
+}
+
+.access{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:80px;
+  background:var(--light);
+}
+.access dl{margin:0}
+.access dl>div{
+  display:grid;
+  grid-template-columns:110px 1fr;
+  gap:18px;
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+}
+.access dt{
+  color:var(--navy);
+  font-weight:800;
+}
+.access dd{
+  margin:0;
+  color:var(--muted);
+}
+.map{
+  position:relative;
+  min-height:340px;
+  overflow:hidden;
+  border:10px solid #fff;
+  background:#e8eaeb;
+  box-shadow:0 12px 25px rgba(21,40,62,.08);
+}
+.map-road{
+  position:absolute;
+  background:#fff;
+  border:1px solid #cfd5da;
+}
+.map-road--horizontal{
+  top:48%;
+  left:-5%;
+  width:110%;
+  height:62px;
+}
+.map-road--vertical{
+  top:-5%;
+  left:56%;
+  width:62px;
+  height:110%;
+}
+.map-station,
+.map-area,
+.map-label{
+  position:absolute;
+  z-index:2;
+  padding:8px 11px;
+  font-size:.74rem;
+  font-weight:800;
+}
+.map-station{
+  top:18%;
+  left:43%;
+  color:#fff;
+  background:var(--navy);
+}
+.map-area{
+  right:11%;
+  bottom:25%;
+  color:var(--navy);
+  border:2px solid var(--gold);
+  background:#fff;
+}
+.map-label{
+  top:33%;
+  left:58%;
+  color:var(--muted);
+  background:#fff;
+}
+
+.admin-entry{
+  min-height:100px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  padding:24px max(20px,calc((100% - 1220px)/2));
+  color:#cbd4dc;
+  background:#15263d;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.admin-entry small{
+  display:block;
+  color:var(--gold);
+  font-size:.62rem;
+  font-weight:800;
+  letter-spacing:.18em;
+}
+.admin-entry strong{
+  display:block;
+  color:#fff;
+  font-size:.95rem;
+}
+.admin-entry a{
+  padding:10px 18px;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.45);
+  text-decoration:none;
+  font-size:.78rem;
+}
+
+.site-footer{
+  color:#d7dfe6;
+  background:var(--navy-deep);
+}
+.footer-main{
+  width:min(1220px,calc(100% - 40px));
+  min-height:155px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+.footer-brand strong,
+.footer-brand small{display:block}
+.footer-brand strong{
+  color:#fff;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:1.25rem;
+  letter-spacing:.08em;
+}
+.footer-brand small{
+  color:#8999aa;
+  font-size:.54rem;
+  letter-spacing:.14em;
+}
+.footer-main nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.footer-main a{
+  color:#d7dfe6;
+  font-size:.78rem;
+  text-decoration:none;
+}
+.fiction-footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:13px 22px;
+  color:#fff;
+  background:#050505;
+  font-size:.75rem;
+}
+
+@media(max-width:950px){
+  .header-inner{position:relative}
+  .menu-button{
+    display:block;
+    margin-left:auto;
+    padding:9px 12px;
+    color:var(--navy);
+    border:1px solid var(--line);
+    background:#fff;
+    font-weight:800;
+  }
+  .global-nav{
+    position:absolute;
+    top:92px;
+    right:0;
+    left:0;
+    display:none;
+    margin:0;
+    padding:12px 20px 20px;
+    background:#fff;
+    box-shadow:0 12px 24px rgba(20,40,62,.14);
+  }
+  .global-nav.is-open{display:grid}
+  .global-nav a{
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .global-nav a::after{display:none}
+  .hero-inner{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+  .hero-panel{max-width:520px}
+  .quick-links{
+    grid-template-columns:1fr;
+  }
+  .quick-links a{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+  .about-layout{
+    grid-template-columns:1fr;
+  }
+  .about-number{max-width:320px}
+  .category-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .feature-card,
+  .access{
+    grid-template-columns:1fr;
+  }
+  .feature-visual{min-height:360px}
+}
+
+@media(max-width:650px){
+  .header-inner{
+    width:min(100% - 28px,1220px);
+  }
+  .brand-copy strong{font-size:1.02rem}
+  .brand-copy small{display:none}
+  .hero-inner{
+    width:min(100% - 28px,1220px);
+    padding:65px 0 105px;
+  }
+  .hero h1{font-size:3rem}
+  .hero-panel{padding:28px}
+  .quick-links{
+    width:calc(100% - 28px);
+  }
+  .section{
+    padding:70px 20px;
+  }
+  .category-grid{
+    grid-template-columns:1fr;
+  }
+  .feature-copy{
+    padding:38px 24px;
+  }
+  .news-list a{
+    grid-template-columns:1fr auto;
+    gap:8px 12px;
+  }
+  .news-list strong{
+    grid-column:1/-1;
+  }
+  .news-list i{display:none}
+  .admin-entry{
+    display:block;
+  }
+  .admin-entry a{
+    display:inline-block;
+    margin-top:14px;
+  }
+  .footer-main{
+    display:block;
+    padding:38px 0;
+  }
+  .footer-main nav{
+    margin-top:22px;
+  }
+  .fiction-footer{
+    display:block;
+  }
+  .fiction-footer span{
+    display:block;
+  }
+  .fiction-footer span:last-child{
+    margin-top:6px;
+    text-align:right;
+  }
+}

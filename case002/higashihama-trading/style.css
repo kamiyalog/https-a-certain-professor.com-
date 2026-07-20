@@ -1,0 +1,495 @@
+:root {
+  --navy: #123456;
+  --navy-deep: #0b2238;
+  --orange: #e77922;
+  --orange-soft: #f5a04f;
+  --text: #2f3a43;
+  --muted: #6d7983;
+  --line: #d7dde2;
+  --bg: #f5f7f9;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--white);
+  font-family:
+    "Yu Gothic", "Hiragino Kaku Gothic ProN",
+    "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-top {
+  background: var(--white);
+}
+
+.header-inner,
+.nav-inner,
+.section-inner,
+.footer-inner {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.header-inner {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-mark {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.logo-text strong {
+  color: var(--navy-deep);
+  font-size: 1.55rem;
+  letter-spacing: .12em;
+}
+
+.logo-text small {
+  color: var(--muted);
+  font-size: .67rem;
+  letter-spacing: .1em;
+}
+
+.header-contact {
+  text-align: right;
+  line-height: 1.4;
+}
+
+.header-contact span,
+.header-contact small {
+  display: block;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.header-contact strong {
+  display: block;
+  color: var(--navy);
+  font-size: 1.35rem;
+  letter-spacing: .04em;
+}
+
+.global-nav {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.nav-inner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.nav-inner a {
+  padding: 15px 10px;
+  border-left: 1px solid rgba(255,255,255,.13);
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.nav-inner a:last-child {
+  border-right: 1px solid rgba(255,255,255,.13);
+}
+
+.nav-inner a:hover,
+.nav-inner a.current {
+  background: var(--orange);
+}
+
+.hero {
+  min-height: 440px;
+  background:
+    linear-gradient(90deg, rgba(8,31,52,.92), rgba(8,31,52,.32)),
+    url("assets/higashihama-main.jpg") center / cover no-repeat,
+    #80909a;
+}
+
+.hero-overlay {
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  color: var(--white);
+}
+
+.hero-kicker {
+  margin: 0 0 12px;
+  color: #ffd2a3;
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.4;
+  letter-spacing: .09em;
+}
+
+.hero-copy {
+  margin: 25px 0 0;
+  font-size: 1rem;
+  letter-spacing: .06em;
+}
+
+section {
+  padding: 78px 0;
+}
+
+.intro {
+  background: var(--white);
+  text-align: center;
+}
+
+.section-label {
+  margin: 0 0 8px;
+  color: var(--orange);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .22em;
+}
+
+h2 {
+  margin: 0;
+  color: var(--navy-deep);
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  line-height: 1.5;
+  letter-spacing: .08em;
+}
+
+.lead {
+  max-width: 800px;
+  margin: 28px auto 0;
+  color: var(--muted);
+}
+
+.products,
+.about {
+  background: var(--bg);
+}
+
+.section-heading {
+  margin-bottom: 38px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.section-heading > p {
+  max-width: 420px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.product-card {
+  min-height: 240px;
+  padding: 26px 22px;
+  background: var(--white);
+  border-top: 4px solid var(--orange);
+  box-shadow: 0 8px 24px rgba(20,45,65,.07);
+}
+
+.product-icon {
+  margin-bottom: 18px;
+  color: #b8c2ca;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.product-card h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 1.08rem;
+}
+
+.product-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .87rem;
+}
+
+.news {
+  background: var(--white);
+}
+
+.news-list {
+  border-top: 1px solid var(--line);
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 145px 100px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.news-item time {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.news-category {
+  padding: 3px 8px;
+  background: #e9eef2;
+  color: var(--navy);
+  text-align: center;
+  font-size: .73rem;
+  font-weight: 700;
+}
+
+.news-item p {
+  margin: 0;
+}
+
+.company-layout {
+  display: grid;
+  grid-template-columns: 1.7fr .8fr;
+  gap: 36px;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+}
+
+.company-table th,
+.company-table td {
+  padding: 17px 20px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.company-table th {
+  width: 150px;
+  background: #eef2f5;
+  color: var(--navy);
+}
+
+.company-note {
+  padding: 30px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.company-note strong {
+  display: block;
+  margin-bottom: 16px;
+  color: #ffd1a4;
+  font-size: 1.15rem;
+}
+
+.company-note p {
+  margin: 0;
+}
+
+.contact {
+  background: var(--navy-deep);
+  color: var(--white);
+}
+
+.contact h2 {
+  color: var(--white);
+}
+
+.contact-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.contact-inner p {
+  margin-bottom: 0;
+}
+
+.contact-box {
+  min-width: 360px;
+  padding: 24px 28px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.06);
+  text-align: center;
+}
+
+.contact-box span,
+.contact-box small {
+  display: block;
+}
+
+.contact-box strong {
+  display: block;
+  margin: 4px 0;
+  color: #ffd1a4;
+  font-size: 1.8rem;
+}
+
+.site-footer {
+  background: #071521;
+  color: #d9e0e5;
+}
+
+.footer-inner {
+  padding: 30px 0 18px;
+}
+
+.footer-inner > div:first-child {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.footer-inner strong {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.footer-inner span {
+  font-size: .78rem;
+}
+
+.footer-bottom {
+  margin-top: 22px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+
+.page-number {
+  flex: 0 0 auto;
+  font-size: .95rem !important;
+}
+
+@media (max-width: 900px) {
+  .header-contact {
+    display: none;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-inner {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact-box {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .header-inner {
+    min-height: 78px;
+  }
+
+  .nav-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-inner a {
+    border-bottom: 1px solid rgba(255,255,255,.13);
+  }
+
+  .hero {
+    min-height: 380px;
+  }
+
+  section {
+    padding: 58px 0;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .news-category {
+    width: fit-content;
+  }
+
+  .company-table th,
+  .company-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .company-table th {
+    border-bottom: 0;
+  }
+
+  .footer-inner > div:first-child,
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

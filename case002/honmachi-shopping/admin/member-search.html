@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>会員照会｜本町中央商店街 運営管理システム</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="system-header">
+    <div class="system-header-inner">
+      <div class="system-title">
+        <small>HONMACHI CHUO SHOPPING STREET</small>
+        <strong>本町中央商店街　運営管理システム</strong>
+      </div>
+      <span class="system-code">MEMBER DATABASE</span>
+    </div>
+  </header>
+
+  <div class="system-nav">
+    <div class="system-nav-inner">
+      管理メニュー &nbsp;&gt;&nbsp; 会員照会
+    </div>
+  </div>
+
+  <main>
+    <div class="admin-shell">
+      <nav class="admin-menu" aria-label="管理メニュー">
+        <div class="admin-menu-title">管理メニュー</div>
+        <a class="current" href="member-search.html">会員照会</a>
+        <a href="schedule.html">年間スケジュール</a>
+        <a href="ledger.html">会費帳簿</a>
+        <a href="camera/index.html">監視カメラ画像</a>
+        <a href="lost-property/index.html">落とし物情報</a>
+        <a class="logout" href="index.html">ログアウト</a>
+      </nav>
+
+      <div class="content-stack">
+        <section class="panel">
+          <div class="panel-heading">会員照会</div>
+          <div class="panel-body">
+            <p class="login-lead">
+              登録されている会員番号を入力し、会員情報を照会してください。
+            </p>
+
+            <form id="search-form" class="search-box" autocomplete="off">
+              <label for="member-number">会員番号</label>
+              <input
+                id="member-number"
+                name="member-number"
+                type="text"
+                inputmode="numeric"
+                maxlength="5"
+                placeholder="半角数字5桁"
+                required
+              >
+              <button class="search-button" type="submit">検索</button>
+            </form>
+
+            <p id="result-message" class="result-message" role="alert" aria-live="polite"></p>
+
+            <section id="result-panel" class="result-panel" hidden>
+              <p class="result-caption">検索結果：1件</p>
+              <table class="member-table">
+                <tbody>
+                  <tr>
+                    <th>会員番号</th>
+                    <td id="result-number"></td>
+                  </tr>
+                  <tr>
+                    <th>店舗名</th>
+                    <td id="result-shop"></td>
+                  </tr>
+                  <tr>
+                    <th>代表者</th>
+                    <td id="result-name"></td>
+                  </tr>
+                  <tr>
+                    <th>役職</th>
+                    <td id="result-role"></td>
+                  </tr>
+                  <tr>
+                    <th>加入日</th>
+                    <td id="result-date"></td>
+                  </tr>
+                  <tr>
+                    <th>登録状態</th>
+                    <td><span class="member-status">有効</span></td>
+                  </tr>
+                  <tr>
+                    <th>備考</th>
+                    <td id="result-note"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="system-footer">
+    <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
+    <span>20/53</span>
+  </footer>
+
+  <script src="member-search.js"></script>
+</body>
+</html>

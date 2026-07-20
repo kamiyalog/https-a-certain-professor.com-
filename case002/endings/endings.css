@@ -1,0 +1,133 @@
+
+:root{
+  --ink:#1d2023;
+  --paper:#f3efe6;
+  --line:#cfc7b7;
+  --red:#7d1818;
+  --blue:#102f46;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
+body{background:#e8e5de;color:var(--ink)}
+.end-page{
+  width:min(1040px,calc(100% - 32px));
+  margin:38px auto;
+}
+.end-card{
+  background:#fff;
+  border:1px solid #d5d9dc;
+  box-shadow:0 18px 55px rgba(0,0,0,.12);
+}
+.end-visual{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:650px;
+  object-fit:contain;
+  background:#f7f7f7;
+}
+.end-content{padding:42px 46px 48px}
+.end-label{
+  margin:0 0 8px;
+  color:#6b747a;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+.end-title{
+  margin:0 0 28px;
+  font-size:clamp(2rem,5vw,4.2rem);
+  line-height:1;
+  letter-spacing:.04em;
+}
+.end-text{
+  margin:0;
+  font-size:1.03rem;
+  line-height:2;
+  white-space:pre-line;
+}
+.share-block{
+  margin-top:38px;
+  padding-top:28px;
+  border-top:1px solid #d8dfe3;
+}
+.share-copy{
+  margin:0 0 16px;
+  font-size:.95rem;
+  font-weight:800;
+}
+.share-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.share-button,
+.note-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:170px;
+  padding:12px 20px;
+  text-decoration:none;
+  font-weight:900;
+  border:1px solid transparent;
+}
+.share-button{
+  background:#101214;
+  color:#fff;
+}
+.note-button{
+  background:#fff;
+  color:#1e2529;
+  border-color:#bfc8cd;
+}
+.note-button.disabled{
+  color:#899399;
+  background:#f1f3f4;
+  pointer-events:none;
+}
+.hashtags{
+  margin:18px 0 0;
+  color:#53626b;
+  font-size:.9rem;
+}
+.end-footer{
+  width:min(1040px,calc(100% - 32px));
+  margin:0 auto 28px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#666;
+  font-size:.73rem;
+}
+.newspaper-page{background:#ded8cc}
+.newspaper-page .end-card{
+  background:#f5f0e5;
+  border-color:#b9ae9a;
+}
+.newspaper-page .end-content{
+  font-family:"Yu Mincho","Hiragino Mincho ProN","Times New Roman",serif;
+}
+.newspaper-page .end-title{
+  color:#171717;
+}
+.newspaper-page .share-block{
+  border-top-color:#c8bda9;
+}
+.good-page{
+  background:linear-gradient(135deg,#edf4f6,#e7ecef);
+}
+.good-page .end-title{
+  color:var(--blue);
+}
+.dialogue{
+  max-width:720px;
+  padding-left:22px;
+  border-left:4px solid #b6cbd5;
+}
+@media(max-width:640px){
+  .end-page{width:min(100% - 18px,1040px);margin:10px auto}
+  .end-content{padding:28px 22px 34px}
+  .share-button,.note-button{width:100%}
+  .end-footer{width:calc(100% - 24px);flex-direction:column;gap:2px}
+}

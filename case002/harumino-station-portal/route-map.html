@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="春見野駅を中心とした東関鉄道環状線の路線図と普通運賃をご案内します。">
+  <title>路線図・運賃｜春見野駅ポータル</title>
+
+  <link rel="stylesheet" href="css/portal.css">
+  <link rel="stylesheet" href="css/route-map.css">
+</head>
+
+<body data-page="2" data-root="../">
+  <header class="site-header">
+    <div class="utility-bar">
+      <div class="utility-bar__inner">
+        <p>東関鉄道　春見野駅</p>
+        <a href="employee/index.html" class="staff-link">職員用ページ</a>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <a href="index.html" class="site-brand" aria-label="春見野駅ポータル ホーム">
+        <span class="site-brand__mark" aria-hidden="true">H</span>
+        <span class="site-brand__text">
+          <strong>春見野駅ポータル</strong>
+          <small>HARUMINO STATION PORTAL</small>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav">
+        メニュー
+      </button>
+    </div>
+
+    <nav class="global-nav" id="global-nav" aria-label="主要メニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="route-map.html" aria-current="page">路線図・運賃</a></li>
+        <li><a href="news.html">駅からのお知らせ</a></li>
+        <li><a href="links.html">周辺・関連リンク</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="section-inner">
+        <p>ROUTE MAP &amp; FARES</p>
+        <h1>路線図・運賃</h1>
+        <span>春見野駅から各駅までの普通運賃をご案内します。</span>
+      </div>
+    </section>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <div class="section-inner">
+        <a href="index.html">ホーム</a>
+        <span aria-hidden="true">›</span>
+        <span>路線図・運賃</span>
+      </div>
+    </nav>
+
+    <section class="route-section">
+      <div class="section-inner">
+        <div class="route-heading">
+          <div>
+            <p class="section-kicker">TOKAN LOOP LINE</p>
+            <h2>東関環状線</h2>
+          </div>
+          <div class="route-key">
+            <span class="route-key__line"></span>
+            <span>東関環状線</span>
+          </div>
+        </div>
+
+        <p class="route-note">
+          春見野駅を起点とした環状線です。内回り・外回りのどちらからも各駅へご乗車いただけます。
+        </p>
+
+        <div class="route-map-wrapper">
+          <svg class="route-map" viewBox="-70 -20 1100 760" role="img"
+               aria-labelledby="route-map-title route-map-desc">
+            <title id="route-map-title">東関環状線 路線図</title>
+            <desc id="route-map-desc">
+              春見野駅を起点に16駅を一周する環状線。月瀬駅と楠見駅は540円、
+              本町中央駅と西大橋駅は680円の運賃区間です。
+            </desc>
+
+            <ellipse class="loop-line" cx="480" cy="360" rx="330" ry="245"></ellipse>
+
+            <g class="station station--origin" transform="translate(480 115)">
+              <circle r="17"></circle>
+              <text class="station-name station-name--top" x="0" y="-34">春見野</text>
+              <text class="fare fare--top" x="0" y="-57">起点</text>
+            </g>
+
+            <g class="station" transform="translate(606 133)">
+              <circle r="11"></circle>
+              <text class="station-name" x="18" y="-6">若葉台</text>
+              <text class="fare" x="18" y="13">180円</text>
+            </g>
+
+            <g class="station" transform="translate(714 190)">
+              <circle r="11"></circle>
+              <text class="station-name" x="18" y="-6">東野町</text>
+              <text class="fare" x="18" y="13">220円</text>
+            </g>
+
+            <g class="station" transform="translate(786 275)">
+              <circle r="11"></circle>
+              <text class="station-name" x="18" y="-6">新川通り</text>
+              <text class="fare" x="18" y="13">260円</text>
+            </g>
+
+            <g class="station" transform="translate(810 360)">
+              <circle r="11"></circle>
+              <text class="station-name" x="18" y="-6">南浜</text>
+              <text class="fare" x="18" y="13">310円</text>
+            </g>
+
+            <g class="station" transform="translate(786 445)">
+              <circle r="11"></circle>
+              <text class="station-name" x="18" y="-6">川代</text>
+              <text class="fare" x="18" y="13">380円</text>
+            </g>
+
+            <g class="station" transform="translate(714 530)">
+              <circle r="11"></circle>
+              <text class="station-name" x="18" y="-6">高松原</text>
+              <text class="fare" x="18" y="13">460円</text>
+            </g>
+
+            <g class="station" transform="translate(606 587)">
+              <circle r="13"></circle>
+              <text class="station-name" x="18" y="-6">月瀬</text>
+              <text class="fare" x="18" y="13">540円</text>
+            </g>
+
+            <g class="station" transform="translate(480 605)">
+              <circle r="11"></circle>
+              <text class="station-name station-name--bottom" x="0" y="35">楠見</text>
+              <text class="fare fare--bottom" x="0" y="55">540円</text>
+            </g>
+
+            <g class="station" transform="translate(354 587)">
+              <circle r="11"></circle>
+              <text class="station-name station-name--left" x="-18" y="-6">北丘</text>
+              <text class="fare fare--left" x="-18" y="13">620円</text>
+            </g>
+
+            <g class="station" transform="translate(246 530)">
+              <circle r="13"></circle>
+              <text class="station-name station-name--left" x="-18" y="-6">本町中央</text>
+              <text class="fare fare--left" x="-18" y="13">680円</text>
+            </g>
+
+            <g class="station" transform="translate(174 445)">
+              <circle r="11"></circle>
+              <text class="station-name station-name--left" x="-18" y="-6">西大橋</text>
+              <text class="fare fare--left" x="-18" y="13">680円</text>
+            </g>
+
+            <g class="station" transform="translate(150 360)">
+              <circle r="11"></circle>
+              <text class="station-name station-name--left" x="-18" y="-6">松葉町</text>
+              <text class="fare fare--left" x="-18" y="13">620円</text>
+            </g>
+
+            <g class="station" transform="translate(174 275)">
+              <circle r="11"></circle>
+              <text class="station-name station-name--left" x="-18" y="-6">中町</text>
+              <text class="fare fare--left" x="-18" y="13">460円</text>
+            </g>
+
+            <g class="station" transform="translate(246 190)">
+              <circle r="11"></circle>
+              <text class="station-name station-name--left" x="-18" y="-6">青葉坂</text>
+              <text class="fare fare--left" x="-18" y="13">310円</text>
+            </g>
+
+            <g class="station" transform="translate(354 133)">
+              <circle r="11"></circle>
+              <text class="station-name station-name--left" x="-18" y="-6">宮前</text>
+              <text class="fare fare--left" x="-18" y="13">220円</text>
+            </g>
+
+            <g class="map-center">
+              <text x="480" y="336">東関鉄道</text>
+              <text class="map-center__main" x="480" y="374">東関環状線</text>
+              <text class="map-center__sub" x="480" y="404">TOKAN LOOP LINE</text>
+            </g>
+
+            <g class="direction direction--outer">
+              <path d="M 570 205 C 632 222 680 255 716 301"></path>
+              <polygon points="710,291 722,307 703,303"></polygon>
+              <text x="635" y="224">外回り</text>
+            </g>
+
+            <g class="direction direction--inner">
+              <path d="M 390 515 C 328 498 280 465 244 419"></path>
+              <polygon points="250,429 238,413 257,417"></polygon>
+              <text x="300" y="504">内回り</text>
+            </g>
+          </svg>
+        </div>
+
+        <p class="map-caption">
+          ※路線図は案内用に簡略化しています。駅間の距離・位置関係は実際の方角とは異なる場合があります。
+        </p>
+      </div>
+    </section>
+
+    <section class="fare-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <p>ORDINARY FARES</p>
+            <h2>春見野駅からの普通運賃</h2>
+          </div>
+        </div>
+
+        <div class="fare-table-wrapper">
+          <table class="fare-table">
+            <thead>
+              <tr>
+                <th scope="col">運賃</th>
+                <th scope="col">対象駅</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">180円</th>
+                <td>若葉台</td>
+              </tr>
+              <tr>
+                <th scope="row">220円</th>
+                <td>東野町、宮前</td>
+              </tr>
+              <tr>
+                <th scope="row">260円</th>
+                <td>新川通り</td>
+              </tr>
+              <tr>
+                <th scope="row">310円</th>
+                <td>南浜、青葉坂</td>
+              </tr>
+              <tr>
+                <th scope="row">380円</th>
+                <td>川代</td>
+              </tr>
+              <tr>
+                <th scope="row">460円</th>
+                <td>高松原、中町</td>
+              </tr>
+              <tr>
+                <th scope="row">540円</th>
+                <td>月瀬、楠見</td>
+              </tr>
+              <tr>
+                <th scope="row">620円</th>
+                <td>北丘、松葉町</td>
+              </tr>
+              <tr>
+                <th scope="row">680円</th>
+                <td>本町中央、西大橋</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="fare-notes">
+          <h3>ご案内</h3>
+          <ul>
+            <li>上記は大人1名の普通運賃です。</li>
+            <li>小児運賃は大人運賃の半額です。10円未満の端数は切り上げます。</li>
+            <li>交通系ICカードをご利用の場合も、同額の運賃を適用します。</li>
+            <li>内回り・外回りのいずれを利用した場合も、目的駅までの普通運賃は同額です。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-navigation">
+      <div class="section-inner">
+        <a href="index.html">春見野駅ポータルへ戻る</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuButton = document.querySelector(".menu-button");
+    const navigation = document.querySelector(".global-nav");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      navigation.classList.toggle("is-open", !isOpen);
+    });
+  </script>
+
+  <script src="../common/js/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>カード照会｜春見野駅 職員用ページ</title>
+
+  <link rel="stylesheet" href="../css/employee-dashboard.css">
+  <link rel="stylesheet" href="../css/card-search.css">
+</head>
+
+<body data-page="8" data-root="../../">
+  <header class="internal-header">
+    <div class="internal-header__top">
+      <div class="internal-brand">
+        <span class="internal-brand__mark">TK</span>
+        <div>
+          <p>東関鉄道</p>
+          <strong>春見野駅 職員用ページ</strong>
+        </div>
+      </div>
+
+      <div class="login-user">
+        <span>ログイン中</span>
+        <strong>職員ID：1012</strong>
+        <a href="index.html">ログアウト</a>
+      </div>
+    </div>
+
+    <nav class="internal-nav" aria-label="職員用メニュー">
+      <a href="dashboard.html">ホーム</a>
+      <a href="directory.html">職員名簿</a>
+      <a href="employee-notices.html">職員用お知らせ</a>
+      <span class="nav-disabled" aria-disabled="true">申請関連</span>
+      <span class="nav-disabled" aria-disabled="true">運行・工事スケジュール</span>
+      <a href="card-search.html" aria-current="page">カード照会</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-main">
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <div class="sidebar__heading">業務メニュー</div>
+        <nav class="sidebar__nav" aria-label="業務メニュー">
+          <a href="dashboard.html">職員用ページTOP</a>
+          <a href="directory.html">職員名簿</a>
+          <a href="employee-notices.html">職員用お知らせ</a>
+          <a href="#" class="sidebar-link-disabled" aria-disabled="true">申請関連</a>
+          <a href="#" class="sidebar-link-disabled" aria-disabled="true">運行・工事スケジュール</a>
+          <a href="card-search.html" class="is-current">カード照会</a>
+        </nav>
+
+        <div class="sidebar__support">
+          <strong>システムに関するお問い合わせ</strong>
+          <span>東関鉄道 情報管理室</span>
+          <span>内線 3812</span>
+        </div>
+      </aside>
+
+      <section class="dashboard-content">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <span>職員用ページ</span>
+          <span aria-hidden="true">›</span>
+          <span>カード照会</span>
+        </nav>
+
+        <div class="page-heading">
+          <div>
+            <p>IC CARD INQUIRY</p>
+            <h1>カード照会</h1>
+          </div>
+          <span class="system-date">最終更新：2026年7月20日</span>
+        </div>
+
+        <section class="search-panel" aria-labelledby="search-heading">
+          <div class="search-panel__heading">
+            <h2 id="search-heading">交通系ICカード照会</h2>
+            <p>カード番号を入力し、検索ボタンを押してください。</p>
+          </div>
+
+          <form id="card-search-form" class="search-form" novalidate>
+            <div class="search-field">
+              <label for="card-id">交通系ICカード番号</label>
+              <input
+                type="text"
+                id="card-id"
+                name="card-id"
+                autocomplete="off"
+                maxlength="32"
+                placeholder="　"
+              >
+            </div>
+
+            <button type="submit" class="search-button">検索</button>
+          </form>
+
+          <p class="search-message" id="search-message" aria-live="polite"></p>
+        </section>
+
+        <section class="result-section" id="old-card-result" hidden>
+          <div class="section-heading">
+            <h2>検索結果</h2>
+            <span>SEARCH RESULT</span>
+          </div>
+
+          <div class="result-summary">
+            <span>該当件数</span>
+            <strong>1件</strong>
+          </div>
+
+          <div class="card-status-box">
+            <dl>
+              <div>
+                <dt>カード番号</dt>
+                <dd>S147847</dd>
+              </div>
+              <div>
+                <dt>状態</dt>
+                <dd><span class="status-changed">カード変更済み</span></dd>
+              </div>
+              <div>
+                <dt>新カード番号</dt>
+                <dd class="new-card-id">M547847</dd>
+              </div>
+            </dl>
+
+            <p class="status-note">
+              このカードは現在利用できません。新しいカード番号で再度照会してください。
+            </p>
+          </div>
+        </section>
+
+        <section class="result-section" id="new-card-result" hidden>
+          <div class="section-heading">
+            <h2>利用履歴</h2>
+            <span>USAGE HISTORY</span>
+          </div>
+
+          <div class="result-summary">
+            <span>カード番号</span>
+            <strong>M547847</strong>
+          </div>
+
+          <div class="history-table-wrapper">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th scope="col">利用日</th>
+                  <th scope="col">時刻</th>
+                  <th scope="col">駅名</th>
+                  <th scope="col">処理</th>
+                  <th scope="col">金額</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026/07/16</td>
+                  <td>07:00</td>
+                  <td>月瀬駅</td>
+                  <td>乗車</td>
+                  <td>540円</td>
+                </tr>
+                <tr>
+                  <td>2026/07/16</td>
+                  <td>22:48</td>
+                  <td>春見野駅</td>
+                  <td>乗車</td>
+                  <td>540円</td>
+                </tr>
+                <tr>
+                  <td>2026/07/17</td>
+                  <td>07:00</td>
+                  <td>月瀬駅</td>
+                  <td>乗車</td>
+                  <td>540円</td>
+                </tr>
+                <tr>
+                  <td>2026/07/17</td>
+                  <td>23:50</td>
+                  <td>春見野駅</td>
+                  <td>乗車</td>
+                  <td>540円</td>
+                </tr>
+                <tr>
+                  <td>2026/07/18</td>
+                  <td>07:00</td>
+                  <td>月瀬駅</td>
+                  <td>乗車</td>
+                  <td>540円</td>
+                </tr>
+                <tr>
+                  <td>2026/07/18</td>
+                  <td>22:12</td>
+                  <td>春見野駅</td>
+                  <td>乗車</td>
+                  <td>540円</td>
+                </tr>
+                <tr>
+                  <td>2026/07/20</td>
+                  <td>08:00</td>
+                  <td>月瀬駅</td>
+                  <td>乗車</td>
+                  <td>540円</td>
+                </tr>
+                <tr>
+                  <td>2026/07/20</td>
+                  <td>08:31</td>
+                  <td>春見野駅</td>
+                  <td>乗車</td>
+                  <td>680円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="system-note">
+            <h2>表示対象について</h2>
+            <p>
+              本照会では、東関鉄道管内で処理された利用情報のみ表示しています。
+              他社線および他交通機関の乗降情報は表示されません。
+            </p>
+          </div>
+        </section>
+
+        <section class="card-search-notes">
+          <h2>利用上の注意</h2>
+          <ul>
+            <li>カード番号は半角英数字で入力してください。</li>
+            <li>照会結果は、東関鉄道のカード処理記録に基づいています。</li>
+            <li>照会結果の外部共有、複製、撮影は禁止されています。</li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <script src="../js/card-search.js"></script>
+  <script src="../../common/js/footer.js"></script>
+</body>
+</html>

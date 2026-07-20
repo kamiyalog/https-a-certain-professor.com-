@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>運営管理システム｜本町中央商店街</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="system-header">
+    <div class="system-header-inner">
+      <div class="system-title">
+        <small>HONMACHI CHUO SHOPPING STREET</small>
+        <strong>本町中央商店街　運営管理システム</strong>
+      </div>
+      <span class="system-code">ADMINISTRATION SYSTEM</span>
+    </div>
+  </header>
+
+  <div class="system-nav">
+    <div class="system-nav-inner">
+      <a href="../index.html">本町中央商店街トップ</a>
+      &nbsp;&gt;&nbsp; 運営管理システム
+    </div>
+  </div>
+
+  <main>
+    <div class="login-layout">
+      <section class="panel">
+        <div class="panel-heading">システムログイン</div>
+        <div class="panel-body">
+          <p class="login-lead">
+            本システムは、本町中央商店街の加盟店および役員専用です。<br>
+            登録されている会員番号とパスワードを入力してください。
+          </p>
+
+          <form id="login-form" autocomplete="off">
+            <div class="form-row">
+              <label for="member-id">会員番号</label>
+              <input
+                id="member-id"
+                name="member-id"
+                type="text"
+                inputmode="numeric"
+                maxlength="5"
+                aria-describedby="member-note"
+                required
+              >
+            </div>
+            <p id="member-note" class="form-note">半角数字5桁で入力してください。</p>
+
+            <div class="form-row">
+              <label for="password">パスワード</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                inputmode="numeric"
+                maxlength="4"
+                required
+              >
+            </div>
+
+            <div class="button-row">
+              <button id="login-button" class="login-button" type="submit">ログイン</button>
+            </div>
+            <p id="status" class="status" role="alert" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <aside>
+        <section class="notice-box">
+          <div class="notice-heading">【お知らせ】初回ログインについて</div>
+          <div class="notice-body">
+            <p>
+              初回ログイン時のパスワードは、<br>
+              <strong>会長の誕生日（月日4桁）</strong>です。<br>
+              ログイン後は各自変更してください。
+            </p>
+          </div>
+        </section>
+
+        <section class="security-box">
+          <strong>ご利用上の注意</strong>
+          関係者以外による本システムの利用を禁止します。<br>
+          会員番号およびパスワードを第三者に開示しないでください。
+        </section>
+
+        <div class="back-link">
+          <a href="../index.html">一般向けサイトへ戻る</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="system-footer">
+    <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
+    <span>19/53</span>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,580 @@
+:root {
+  --ink: #26211f;
+  --muted: #756b66;
+  --wine: #5d2d3b;
+  --gold: #a58a5a;
+  --paper: #f8f5ef;
+  --paper-deep: #eee8de;
+  --line: #d7cec1;
+  --black: #121212;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(255,255,255,.76), rgba(255,255,255,.76)),
+    repeating-linear-gradient(
+      0deg,
+      #f3efe7 0,
+      #f3efe7 2px,
+      #f7f4ee 2px,
+      #f7f4ee 4px
+    );
+  font-family:
+    "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro",
+    "Noto Serif JP", serif;
+  line-height: 1.9;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  background: rgba(18,18,18,.97);
+  color: #fff;
+  border-bottom: 3px solid var(--gold);
+}
+
+.header-inner {
+  width: min(1120px, calc(100% - 36px));
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.site-name {
+  font-size: clamp(1.8rem, 4vw, 2.45rem);
+  letter-spacing: .18em;
+  white-space: nowrap;
+}
+
+.global-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.global-nav a {
+  position: relative;
+  padding: 27px 18px 23px;
+  font-size: .93rem;
+  letter-spacing: .08em;
+}
+
+.global-nav a:hover,
+.global-nav a.current {
+  color: #e4c58c;
+}
+
+.global-nav a.current::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  left: 18px;
+  height: 2px;
+  background: #e4c58c;
+}
+
+.hero {
+  position: relative;
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(10,10,10,.78), rgba(10,10,10,.16)),
+    url("assets/koumyoji-main.jpg") center / cover no-repeat,
+    #34312d;
+  color: #fff;
+}
+
+.hero-content {
+  width: min(1120px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.hero-copy {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(1.75rem, 4.6vw, 3.3rem);
+  font-weight: 400;
+  letter-spacing: .14em;
+  line-height: 1.65;
+  text-shadow: 0 3px 14px rgba(0,0,0,.65);
+}
+
+.hero-subcopy {
+  margin: 26px 0 0;
+  font-size: 1rem;
+  letter-spacing: .18em;
+  opacity: .9;
+}
+
+main {
+  min-height: calc(100vh - 136px);
+}
+
+.content-wrap {
+  width: min(1050px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 54px 0 76px;
+}
+
+.breadcrumb {
+  margin-bottom: 32px;
+  color: var(--muted);
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: .86rem;
+}
+
+.page-title {
+  margin: 0 auto 46px;
+  padding-bottom: 18px;
+  max-width: 680px;
+  border-bottom: 1px solid var(--line);
+  color: var(--wine);
+  text-align: center;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: .18em;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.home-section {
+  padding: 54px 0 70px;
+}
+
+.home-heading {
+  margin: 0 0 24px;
+  color: var(--wine);
+  text-align: center;
+  font-size: 1.65rem;
+  font-weight: 400;
+  letter-spacing: .14em;
+}
+
+.home-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.link-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 46px;
+}
+
+.link-card {
+  min-height: 155px;
+  padding: 28px 28px 24px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.68);
+  box-shadow: 0 8px 24px rgba(52,42,35,.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(52,42,35,.11);
+}
+
+.link-card strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--wine);
+  font-size: 1.16rem;
+  letter-spacing: .08em;
+}
+
+.link-card span {
+  display: block;
+  color: var(--muted);
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: .9rem;
+  line-height: 1.75;
+}
+
+.link-card b {
+  display: block;
+  margin-top: 17px;
+  text-align: right;
+  color: var(--wine);
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.article-box {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 42px 48px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.74);
+  box-shadow: 0 12px 35px rgba(52,42,35,.07);
+}
+
+.article-meta {
+  margin-bottom: 26px;
+  text-align: right;
+  color: var(--muted);
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: .9rem;
+}
+
+.article-title {
+  margin: 0 0 28px;
+  font-size: 1.42rem;
+  letter-spacing: .08em;
+}
+
+.article-box p {
+  margin: 0 0 1.4em;
+}
+
+.signature {
+  margin-top: 42px;
+  text-align: right;
+}
+
+.back-link {
+  max-width: 860px;
+  margin: 30px auto 0;
+  color: var(--wine);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.emergency-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 44px 50px 50px;
+  border: 2px solid #6d2634;
+  background:
+    linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)),
+    repeating-linear-gradient(
+      -45deg,
+      #f5eded 0,
+      #f5eded 8px,
+      #fff 8px,
+      #fff 16px
+    );
+  box-shadow: 0 12px 35px rgba(80,20,30,.12);
+}
+
+.emergency-lead {
+  margin: 0 0 30px;
+  color: #751f31;
+  text-align: center;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: steps;
+}
+
+.steps li {
+  counter-increment: steps;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 0 0 30px 74px;
+  border-bottom: 1px solid #d8c8cb;
+}
+
+.steps li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.steps li::before {
+  content: counter(steps);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: #612637;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+}
+
+.steps h2 {
+  margin: 0 0 8px;
+  color: #4d1f2b;
+  font-size: 1.25rem;
+  letter-spacing: .08em;
+}
+
+.steps p {
+  margin: 0;
+}
+
+.warning {
+  max-width: 900px;
+  margin: 28px auto 0;
+  padding: 20px 24px;
+  border-left: 5px solid #812d3f;
+  background: #eee5e6;
+  color: #571d29;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-weight: 700;
+}
+
+.site-footer {
+  min-height: 60px;
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #050505;
+  color: #eee;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: .78rem;
+}
+
+.page-number {
+  font-size: .98rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .header-inner {
+    padding: 14px 0;
+    display: block;
+  }
+
+  .site-name {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .global-nav {
+    overflow-x: auto;
+    gap: 0;
+  }
+
+  .global-nav a {
+    padding: 10px 14px;
+    white-space: nowrap;
+  }
+
+  .global-nav a.current::after {
+    right: 14px;
+    bottom: 3px;
+    left: 14px;
+  }
+
+  .hero {
+    min-height: 360px;
+  }
+
+  .link-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .article-box,
+  .emergency-box {
+    padding: 30px 24px;
+  }
+
+  .steps li {
+    padding-left: 62px;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* お知らせ一覧 */
+.notice-list {
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.notice-item {
+  display: grid;
+  grid-template-columns: 145px 110px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 19px 8px;
+  border-bottom: 1px solid var(--line);
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.notice-item time {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.notice-category {
+  padding: 3px 10px;
+  border: 1px solid #b9aa95;
+  background: rgba(255,255,255,.5);
+  color: #6d5842;
+  text-align: center;
+  font-size: .78rem;
+}
+
+.notice-open {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.notice-open:hover {
+  color: var(--wine);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.notice-article {
+  display: none;
+  max-width: 860px;
+  margin: 38px auto 0;
+}
+
+.notice-article.is-open {
+  display: block;
+}
+
+.notice-return {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.notice-return button {
+  border: 0;
+  background: transparent;
+  color: var(--wine);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .notice-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .notice-category {
+    width: fit-content;
+  }
+}
+
+
+/* 準備中ページ */
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.card-title-row strong {
+  margin-bottom: 0;
+}
+
+.preparing-badge {
+  flex: 0 0 auto;
+  padding: 2px 9px;
+  border: 1px solid #aaa097;
+  background: #ece8e2;
+  color: #756d67;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: .72rem;
+  line-height: 1.5;
+  letter-spacing: .08em;
+}
+
+.link-card-disabled {
+  cursor: default;
+  opacity: .72;
+  background: rgba(238,235,229,.75);
+  box-shadow: none;
+}
+
+.link-card-disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.maintenance-message {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px dashed #bdb4aa;
+  color: #6f6761;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: .86rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.global-nav .nav-disabled {
+  position: relative;
+  padding: 27px 18px 23px;
+  color: #878787;
+  cursor: default;
+  white-space: nowrap;
+  font-size: .93rem;
+  letter-spacing: .08em;
+}
+
+.global-nav .nav-disabled small {
+  display: block;
+  margin-top: -4px;
+  color: #9a8e83;
+  text-align: center;
+  font-size: .58rem;
+  letter-spacing: .06em;
+}
+
+@media (max-width: 800px) {
+  .global-nav .nav-disabled {
+    padding: 10px 14px;
+  }
+
+  .global-nav .nav-disabled small {
+    display: inline;
+    margin: 0 0 0 5px;
+  }
+}

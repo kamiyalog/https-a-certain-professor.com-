@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>落とし物詳細｜傘｜本町中央商店街</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="system-header">
+    <div class="system-header-inner">
+      <div class="system-title">
+        <small>HONMACHI CHUO SHOPPING STREET</small>
+        <strong>本町中央商店街　運営管理システム</strong>
+      </div>
+      <span class="system-code">ADMINISTRATION SYSTEM</span>
+    </div>
+  </header>
+
+  <div class="system-nav">
+    <div class="system-nav-inner">
+      <a href="../member-search.html">運営管理システム</a>
+      &nbsp;&gt;&nbsp;
+      <a href="index.html">落とし物情報</a>
+      &nbsp;&gt;&nbsp; 傘
+    </div>
+  </div>
+
+  <main>
+    <div class="admin-shell">
+      <aside class="admin-menu">
+        <div class="admin-menu-title">管理メニュー</div>
+        <a href="../member-search.html">会員照会</a>
+        <a href="../schedule.html">年間スケジュール</a>
+        <a href="../ledger.html">会費帳簿</a>
+        <a href="../camera/index.html">監視カメラ画像</a>
+        <a class="current" href="index.html">落とし物情報</a>
+        <a class="logout" href="../index.html">ログアウト</a>
+      </aside>
+
+      <div class="content-stack">
+        <section class="panel">
+          <div class="panel-heading">落とし物詳細</div>
+          <div class="panel-body">
+            <table class="detail-table">
+              <tbody>
+                <tr>
+                  <th>管理番号</th>
+                  <td>LP-0720-03</td>
+                </tr>
+                <tr>
+                  <th>品目</th>
+                  <td>傘</td>
+                </tr>
+                <tr>
+                  <th>保管状況</th>
+                  <td><span class="status-badge">保管中</span></td>
+                </tr>
+                <tr>
+                  <th>拾得日時</th>
+                  <td>2026年7月20日　11:18</td>
+                </tr>
+                <tr>
+                  <th>拾得場所</th>
+                  <td>本町中央商店街　南口付近</td>
+                </tr>
+                <tr>
+                  <th>拾得者</th>
+                  <td>商店街利用者</td>
+                </tr>
+                <tr>
+                  <th>特徴</th>
+                  <td>
+                    黒色の長傘<br>
+                    持ち手：黒色<br>
+                    目立った破損なし
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">物品写真</div>
+          <div class="panel-body">
+            <div class="photo-grid">
+              <figure class="evidence-card">
+                <button
+                  type="button"
+                  data-lightbox
+                  data-full="assets/umbrella-overview.jpg"
+                  data-title="傘全体"
+                  aria-label="傘全体の写真を拡大表示">
+                  <img
+                    src="assets/umbrella-overview.jpg"
+                    alt="拾得された黒い長傘の全体写真">
+                </button>
+                <figcaption>写真1：傘全体</figcaption>
+              </figure>
+            </div>
+
+            <p class="photo-hint">画像をクリックすると拡大表示できます。</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">備考</div>
+          <div class="panel-body">
+            <div class="notice-box">
+              <strong>確認事項</strong>
+              所有者を特定できる記名や特徴的な付属品は確認されていません。
+            </div>
+
+            <p class="back-link">
+              <a href="index.html">← 落とし物一覧へ戻る</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="system-footer">
+    <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
+    <span>27/53</span>
+  </footer>
+
+  <div
+    class="image-modal"
+    id="image-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-labelledby="image-modal-title">
+
+    <button
+      class="image-modal-nav image-modal-prev"
+      id="image-modal-prev"
+      type="button"
+      aria-label="前の写真">‹</button>
+
+    <div class="image-modal-dialog">
+      <div class="image-modal-header">
+        <span class="image-modal-title" id="image-modal-title">証拠写真</span>
+        <button
+          class="image-modal-close"
+          id="image-modal-close"
+          type="button"
+          aria-label="拡大表示を閉じる">×</button>
+      </div>
+
+      <div class="image-modal-body">
+        <img id="image-modal-image" alt="">
+      </div>
+    </div>
+
+    <button
+      class="image-modal-nav image-modal-next"
+      id="image-modal-next"
+      type="button"
+      aria-label="次の写真">›</button>
+  </div>
+
+  <script src="image-viewer.js"></script>
+</body>
+</html>

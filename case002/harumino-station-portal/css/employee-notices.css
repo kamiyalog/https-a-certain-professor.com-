@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+.notice-introduction {
+  margin-bottom: 28px;
+  padding: 24px 28px;
+  border-left: 5px solid var(--blue);
+  background: #fff;
+}
+
+.notice-introduction h2 {
+  margin: 0 0 8px;
+  color: var(--navy-deep);
+  font-size: 19px;
+}
+
+.notice-introduction p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.staff-notices {
+  margin-top: 28px;
+}
+
+.staff-notice-list {
+  border-top: 2px solid var(--navy);
+  background: #fff;
+}
+
+.staff-notice {
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.staff-notice__meta {
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-right: 1px solid var(--line);
+  background: #f4f7f8;
+}
+
+.staff-notice__meta time {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.staff-notice__category {
+  width: fit-content;
+  min-width: 72px;
+  padding: 3px 8px;
+  border: 1px solid #b7c7d0;
+  color: var(--blue);
+  font-size: 10px;
+  text-align: center;
+}
+
+.staff-notice__category--important {
+  border-color: #b86161;
+  background: #fff3f3;
+  color: #963d3d;
+}
+
+.staff-notice__body {
+  padding: 20px 24px 22px;
+}
+
+.staff-notice__body h3 {
+  margin: 0 0 9px;
+  color: var(--navy-deep);
+  font-size: 16px;
+}
+
+.staff-notice__body p {
+  margin: 0;
+  color: #53636d;
+  font-size: 12px;
+}
+
+.staff-notice__body p + p {
+  margin-top: 8px;
+}
+
+.staff-notice__note {
+  color: #7a4545 !important;
+  font-size: 11px !important;
+}
+
+.staff-notice--important {
+  box-shadow: inset 4px 0 0 #a94c4c;
+}
+
+.staff-notice--important .staff-notice__meta {
+  background: #fbf5f5;
+}
+
+@media (max-width: 650px) {
+  .notice-introduction {
+    padding: 22px 20px;
+  }
+
+  .staff-notice {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-notice__meta {
+    padding: 14px 18px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .staff-notice__body {
+    padding: 18px;
+  }
+}

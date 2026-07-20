@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>？？？</title>
+<style>
+:root{
+  --bg:#080b0d;
+  --panel:#0d1216;
+  --line:#2a343b;
+  --text:#d8dde0;
+  --muted:#89949b;
+  --danger:#a63131;
+  --danger-hover:#dc4a4a;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{
+  margin:0;
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.008) 1px,transparent 1px),
+    var(--bg);
+  background-size:4px 4px;
+  color:var(--text);
+  font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  line-height:2;
+}
+.hidden-page{
+  width:min(820px,calc(100% - 40px));
+  margin:0 auto;
+  padding:90px 0 0;
+}
+.system-mark{
+  margin:0 0 48px;
+  color:#536068;
+  font:700 .7rem/1.4 Consolas,monospace;
+  letter-spacing:.18em;
+}
+.message{
+  padding:40px 42px;
+  border:1px solid var(--line);
+  background:rgba(13,18,22,.88);
+  box-shadow:0 18px 60px rgba(0,0,0,.32);
+}
+.message h1{
+  margin:0 0 38px;
+  color:#aeb7bc;
+  font-size:1rem;
+  font-weight:500;
+  letter-spacing:.32em;
+}
+.message p{
+  margin:0 0 28px;
+  font-size:1rem;
+}
+.message .pause{
+  margin-top:72px;
+}
+.delete-area{
+  min-height:72vh;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding:80px 0 110px;
+}
+.delete-button{
+  appearance:none;
+  border:0;
+  border-bottom:1px solid #6e2929;
+  padding:10px 4px;
+  background:transparent;
+  color:#a65c5c;
+  font:500 .92rem/1.5 inherit;
+  letter-spacing:.12em;
+  cursor:pointer;
+  transition:.2s ease;
+}
+.delete-button:hover,
+.delete-button:focus-visible{
+  color:var(--danger-hover);
+  border-color:var(--danger-hover);
+  outline:none;
+}
+.site-footer{
+  border-top:1px solid #171d21;
+  color:#4d585e;
+  font-size:.72rem;
+}
+.footer-inner{
+  width:min(1180px,calc(100% - 40px));
+  min-height:58px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  display:grid;
+  place-items:center;
+  padding:20px;
+  background:rgba(0,0,0,.78);
+  backdrop-filter:blur(2px);
+  z-index:100;
+}
+.modal-backdrop[hidden]{display:none}
+.confirm-dialog{
+  width:min(440px,100%);
+  border:1px solid #4d2525;
+  background:#101417;
+  box-shadow:0 22px 80px rgba(0,0,0,.65);
+}
+.confirm-dialog header{
+  padding:14px 18px;
+  border-bottom:1px solid #342024;
+  color:#9d5b5b;
+  font:700 .72rem/1.4 Consolas,monospace;
+  letter-spacing:.12em;
+}
+.confirm-body{
+  padding:32px 28px 28px;
+  text-align:center;
+}
+.confirm-body p{
+  margin:0 0 30px;
+  font-size:1rem;
+}
+.confirm-actions{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+}
+.confirm-actions button{
+  min-width:112px;
+  padding:10px 18px;
+  border:1px solid #3d484e;
+  background:#171d21;
+  color:#c7ced2;
+  font:inherit;
+  cursor:pointer;
+}
+.confirm-actions .yes{
+  border-color:#713030;
+  background:#2b1517;
+  color:#d99999;
+}
+.confirm-actions button:hover{
+  filter:brightness(1.18);
+}
+@media(max-width:600px){
+  .hidden-page{width:min(100% - 24px,820px);padding-top:42px}
+  .message{padding:28px 22px}
+  .message p{font-size:.94rem}
+  .footer-inner{width:calc(100% - 24px);align-items:flex-start;flex-direction:column;padding:14px 0;gap:2px}
+}
+</style>
+</head>
+<body>
+
+<main class="hidden-page">
+  <p class="system-mark">INTERNAL / UNLISTED PAGE</p>
+
+  <article class="message">
+    
+
+    <p>ここを見つけられたということは、<br>
+    俺が残した札を見つけたってことだな。</p>
+
+    <p>……大した探偵だ。<br>
+    見つけられるとは思わなかった。</p>
+
+    <p>せっかくサイトに細工したのに台無しだ。<br>
+    ……といっても、このサイト作ったの俺だから簡単だったけどな。</p>
+
+    <p>それにしても面倒な呪いだよ。<br>
+    解呪方法を残しておかないと成立しないとかさ。<br>
+    せっかく、全員消せたっていうのに。</p>
+
+    <p class="pause">けど、本当にここが正解か？<br>
+    消す前に考えてみてもいいかもな？</p>
+  </article>
+
+  <div class="delete-area">
+    <button class="delete-button" id="deletePageButton" type="button">ページを削除する</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
+    <span>63/66</span>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="confirmModal" hidden>
+  <section class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <header>DELETE PAGE</header>
+    <div class="confirm-body">
+      <p id="confirmTitle">本当にページを削除しますか？</p>
+      <div class="confirm-actions">
+        <button class="yes" id="confirmYes" type="button">はい</button>
+        <button id="confirmNo" type="button">いいえ</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const openButton = document.getElementById("deletePageButton");
+  const modal = document.getElementById("confirmModal");
+  const yesButton = document.getElementById("confirmYes");
+  const noButton = document.getElementById("confirmNo");
+
+  const openModal = () => {
+    modal.hidden = false;
+    noButton.focus();
+  };
+
+  const closeModal = () => {
+    modal.hidden = true;
+    openButton.focus();
+  };
+
+  openButton.addEventListener("click", openModal);
+  noButton.addEventListener("click", closeModal);
+
+  yesButton.addEventListener("click", () => {
+    window.location.href = "../../endings/end1.html";
+  });
+
+  modal.addEventListener("click", event => {
+    if (event.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !modal.hidden) closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>

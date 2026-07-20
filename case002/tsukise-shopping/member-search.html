@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>商店街会員検索｜月瀬駅前商店街</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <div class="inner topbar__inner">
+        <p>月瀬駅東口からすぐ。毎日の暮らしに便利な駅前商店街</p>
+        <p>月瀬駅前商店街振興会</p>
+      </div>
+    </div>
+
+    <div class="inner header-main">
+      <a class="logo" href="index.html">
+        <span class="logo__mark">月</span>
+        <span>
+          <strong>月瀬駅前商店街</strong>
+          <small>TSUKISE STATION SHOPPING STREET</small>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav">メニュー</button>
+
+      <nav id="global-nav" class="global-nav">
+        <a href="index.html#about">商店街について</a>
+        <a href="index.html#news">お知らせ</a>
+        <a href="index.html#shops">店舗案内</a>
+        <a href="index.html#events">イベント</a>
+        <a class="global-nav__important" href="lost-and-found.html">落とし物情報</a>
+        <a href="index.html#access">アクセス</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="inner">
+        <p>MEMBER SEARCH</p>
+        <h1>商店街会員検索</h1>
+        <span>月瀬駅前商店街振興会の登録会員を検索できます。</span>
+      </div>
+    </section>
+
+    <div class="inner breadcrumb">
+      <a href="index.html">ホーム</a>
+      <span>›</span>
+      <span>商店街会員検索</span>
+    </div>
+
+    <section class="section member-search-page">
+      <div class="inner">
+        <div class="member-search-intro">
+          <h2>会員情報を検索する</h2>
+          <p>
+            会員名または会員番号を入力し、「検索する」を押してください。
+            入力内容と一致する登録情報がある場合に検索結果を表示します。
+          </p>
+        </div>
+
+        <form id="member-search-form" class="member-search-form" novalidate>
+          <fieldset class="search-type">
+            <legend>検索区分</legend>
+            <label>
+              <input type="radio" name="searchType" value="name" checked>
+              <span>会員名</span>
+            </label>
+            <label>
+              <input type="radio" name="searchType" value="number">
+              <span>会員番号</span>
+            </label>
+          </fieldset>
+
+          <div class="search-keyword">
+            <label for="member-keyword">検索キーワード</label>
+            <div class="search-keyword__row">
+              <input
+                id="member-keyword"
+                name="keyword"
+                type="text"
+                autocomplete="off"
+                placeholder="会員名または会員番号を入力"
+              >
+              <button type="submit">検索する</button>
+            </div>
+            <p>※全角・半角にご注意ください。</p>
+          </div>
+        </form>
+
+        <section id="search-result" class="member-search-result" aria-live="polite" hidden>
+          <div class="member-search-result__heading">
+            <p>SEARCH RESULT</p>
+            <h2>検索結果</h2>
+          </div>
+          <div id="result-message" class="result-message"></div>
+        </section>
+
+        <a class="back-button" href="index.html">月瀬駅前商店街トップへ戻る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner footer-main">
+      <div>
+        <strong>月瀬駅前商店街振興会</strong>
+        <p>春見野市月瀬一丁目</p>
+      </div>
+      <nav>
+        <a href="index.html#about">商店街について</a>
+        <a href="index.html#shops">店舗案内</a>
+        <a href="lost-and-found.html">落とし物情報</a>
+        <a href="member-search.html">会員検索</a>
+        <a href="index.html#access">アクセス</a>
+      </nav>
+    </div>
+    <div class="fiction-footer">
+      <span>このWebサイトの内容はフィクションです。実在の人物・団体とは関係ありません。</span>
+      <span>13/53</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector(".menu-button");
+    const globalNav = document.querySelector(".global-nav");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      globalNav.classList.toggle("is-open", !isOpen);
+    });
+
+    const form = document.getElementById("member-search-form");
+    const keywordInput = document.getElementById("member-keyword");
+    const result = document.getElementById("search-result");
+    const resultMessage = document.getElementById("result-message");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const keyword = keywordInput.value.trim();
+
+      if (keyword.toLowerCase() === "thysoulshallwither") {
+        window.location.href = "Thysoulshallwither.html";
+        return;
+      }
+
+      result.hidden = false;
+
+      if (keyword === "") {
+        resultMessage.innerHTML = `
+          <p class="result-message__error">検索キーワードを入力してください。</p>
+        `;
+        keywordInput.focus();
+        return;
+      }
+
+      resultMessage.innerHTML = `
+        <p class="result-message__empty">
+          入力された条件に該当する会員は見つかりませんでした。
+        </p>
+        <p class="result-message__note">
+          入力内容をご確認のうえ、もう一度検索してください。
+        </p>
+      `;
+      result.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  </script>
+</body>
+</html>

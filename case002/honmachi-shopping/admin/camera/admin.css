@@ -1,0 +1,543 @@
+
+:root{
+  --navy:#18324b;
+  --navy-dark:#0e2234;
+  --blue:#355f82;
+  --line:#c8d1d8;
+  --bg:#e9edf0;
+  --panel:#ffffff;
+  --text:#24333e;
+  --muted:#65737d;
+  --error:#a32929;
+}
+*{box-sizing:border-box}
+html{min-height:100%}
+body{
+  min-height:100vh;
+  margin:0;
+  color:var(--text);
+  background:
+    linear-gradient(rgba(255,255,255,.52),rgba(255,255,255,.52)),
+    repeating-linear-gradient(0deg,#e3e7ea 0,#e3e7ea 1px,#eef1f3 1px,#eef1f3 5px);
+  font-family:"Yu Gothic","Meiryo",sans-serif;
+  font-size:14px;
+}
+.system-header{
+  color:#fff;
+  background:var(--navy-dark);
+  border-bottom:4px solid #9daab3;
+}
+.system-header-inner{
+  width:min(980px,calc(100% - 32px));
+  min-height:78px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.system-title small{
+  display:block;
+  color:#b9c7d2;
+  font-size:10px;
+  letter-spacing:.18em;
+}
+.system-title strong{
+  display:block;
+  margin-top:3px;
+  font-size:20px;
+  letter-spacing:.08em;
+}
+.system-code{
+  padding:5px 9px;
+  color:#d9e2e8;
+  border:1px solid #526879;
+  font-size:11px;
+}
+.system-nav{
+  color:#233541;
+  background:#d9e0e5;
+  border-bottom:1px solid #b2bec6;
+}
+.system-nav-inner{
+  width:min(980px,calc(100% - 32px));
+  margin:auto;
+  padding:7px 0;
+  font-size:12px;
+}
+.system-nav a{
+  color:#244c6b;
+  text-decoration:none;
+}
+main{
+  width:min(980px,calc(100% - 32px));
+  min-height:calc(100vh - 184px);
+  margin:auto;
+  padding:48px 0 72px;
+}
+.login-layout{
+  display:grid;
+  grid-template-columns:minmax(0,570px) minmax(250px,1fr);
+  gap:28px;
+  align-items:start;
+}
+.panel{
+  background:var(--panel);
+  border:1px solid #aebbc4;
+  box-shadow:0 3px 8px rgba(24,45,60,.12);
+}
+.panel-heading{
+  padding:12px 16px;
+  color:#fff;
+  background:linear-gradient(#345b78,#23445e);
+  border-bottom:1px solid #142d40;
+  font-weight:700;
+  letter-spacing:.04em;
+}
+.panel-body{padding:28px}
+.login-lead{
+  margin:0 0 24px;
+  padding-bottom:16px;
+  color:#43545f;
+  border-bottom:1px dotted #aab6be;
+  line-height:1.8;
+}
+.form-row{
+  display:grid;
+  grid-template-columns:125px 1fr;
+  gap:18px;
+  align-items:center;
+  margin-bottom:18px;
+}
+.form-row label{
+  font-weight:700;
+  text-align:right;
+}
+.form-row input{
+  width:100%;
+  height:38px;
+  padding:7px 9px;
+  color:#1b2b35;
+  background:#fff;
+  border:1px solid #8f9ca5;
+  border-radius:0;
+  font:inherit;
+}
+.form-row input:focus{
+  outline:2px solid rgba(53,95,130,.25);
+  border-color:#355f82;
+}
+.form-note{
+  margin:-8px 0 20px 143px;
+  color:#73808a;
+  font-size:12px;
+}
+.button-row{
+  padding-top:8px;
+  text-align:center;
+}
+.login-button{
+  min-width:170px;
+  padding:10px 25px;
+  color:#fff;
+  background:linear-gradient(#3b6686,#244a67);
+  border:1px solid #17364d;
+  box-shadow:inset 0 1px rgba(255,255,255,.25);
+  font:700 14px "Yu Gothic","Meiryo",sans-serif;
+  cursor:pointer;
+}
+.login-button:hover{background:linear-gradient(#456f8e,#2d5672)}
+.login-button:disabled{
+  cursor:wait;
+  opacity:.72;
+}
+.status{
+  min-height:24px;
+  margin:18px 0 0;
+  color:var(--error);
+  font-weight:700;
+  text-align:center;
+}
+.status.success{color:#2b6745}
+.notice-box{
+  margin-bottom:22px;
+  background:#fffdf2;
+  border:1px solid #b9aa75;
+}
+.notice-heading{
+  padding:9px 12px;
+  color:#4b4025;
+  background:#e9ddb0;
+  border-bottom:1px solid #b9aa75;
+  font-weight:700;
+}
+.notice-body{
+  padding:15px;
+  color:#514b3d;
+  line-height:1.8;
+}
+.notice-body p{margin:0}
+.notice-body strong{color:#293b49}
+.security-box{
+  padding:16px;
+  color:#66747e;
+  background:#f7f8f9;
+  border:1px solid #c5cdd3;
+  font-size:12px;
+  line-height:1.8;
+}
+.security-box strong{
+  display:block;
+  margin-bottom:5px;
+  color:#344957;
+}
+.back-link{
+  margin-top:22px;
+  text-align:right;
+}
+.back-link a{
+  color:#315d7e;
+  font-size:12px;
+}
+.system-footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:13px max(16px,calc((100% - 980px)/2));
+  color:#fff;
+  background:#050505;
+  font-size:12px;
+}
+@media(max-width:760px){
+  .login-layout{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .system-header-inner{
+    align-items:flex-start;
+    flex-direction:column;
+    padding:17px 0;
+  }
+  .form-row{
+    grid-template-columns:1fr;
+    gap:5px;
+  }
+  .form-row label{text-align:left}
+  .form-note{margin:-7px 0 18px}
+  .panel-body{padding:22px 18px}
+  .system-footer{flex-direction:column}
+}
+
+
+/* ===== No.20 会員照会 ===== */
+.admin-shell{
+  display:grid;
+  grid-template-columns:210px minmax(0,1fr);
+  gap:24px;
+  align-items:start;
+}
+.admin-menu{
+  background:#f6f7f8;
+  border:1px solid #aebbc4;
+  box-shadow:0 2px 6px rgba(24,45,60,.08);
+}
+.admin-menu-title{
+  padding:11px 13px;
+  color:#fff;
+  background:linear-gradient(#345b78,#23445e);
+  border-bottom:1px solid #142d40;
+  font-weight:700;
+}
+.admin-menu a{
+  display:block;
+  padding:11px 13px;
+  color:#2c4659;
+  border-bottom:1px solid #ccd4da;
+  text-decoration:none;
+}
+.admin-menu a:hover{
+  background:#e7edf1;
+}
+.admin-menu a.current{
+  color:#fff;
+  background:#5a7080;
+  font-weight:700;
+}
+.admin-menu a.logout{
+  color:#6a3131;
+  background:#f5eded;
+  border-bottom:0;
+}
+.content-stack{
+  min-width:0;
+}
+.search-box{
+  display:grid;
+  grid-template-columns:110px minmax(180px,300px) 100px;
+  gap:12px;
+  align-items:center;
+  padding:20px;
+  background:#f5f7f8;
+  border:1px solid #c0cbd2;
+}
+.search-box label{
+  font-weight:700;
+  text-align:right;
+}
+.search-box input{
+  height:36px;
+  padding:6px 9px;
+  border:1px solid #8f9ca5;
+  font:inherit;
+}
+.search-button{
+  height:36px;
+  color:#fff;
+  background:linear-gradient(#3b6686,#244a67);
+  border:1px solid #17364d;
+  font-weight:700;
+  cursor:pointer;
+}
+.search-button:hover{
+  background:linear-gradient(#456f8e,#2d5672);
+}
+.result-message{
+  min-height:22px;
+  margin:14px 0 0;
+  color:#a32929;
+  font-weight:700;
+}
+.result-panel{
+  margin-top:22px;
+}
+.member-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+.member-table th,
+.member-table td{
+  padding:11px 13px;
+  border:1px solid #aebbc4;
+  vertical-align:top;
+}
+.member-table th{
+  width:170px;
+  color:#2d4352;
+  background:#e8edf0;
+  text-align:left;
+}
+.member-table td{
+  background:#fff;
+}
+.member-status{
+  display:inline-block;
+  padding:2px 10px;
+  color:#23593b;
+  background:#e7f1eb;
+  border:1px solid #8cb09a;
+  font-weight:700;
+}
+.result-caption{
+  margin:0 0 10px;
+  color:#687680;
+  font-size:12px;
+}
+@media(max-width:760px){
+  .admin-shell{
+    grid-template-columns:1fr;
+  }
+  .admin-menu{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .admin-menu-title{
+    grid-column:1/-1;
+  }
+  .admin-menu a{
+    border-right:1px solid #ccd4da;
+  }
+}
+@media(max-width:560px){
+  .search-box{
+    grid-template-columns:1fr;
+  }
+  .search-box label{
+    text-align:left;
+  }
+  .search-button{
+    width:100%;
+  }
+  .member-table,
+  .member-table tbody,
+  .member-table tr,
+  .member-table th,
+  .member-table td{
+    display:block;
+    width:100%;
+  }
+  .member-table th{
+    border-bottom:0;
+  }
+}
+
+
+/* ===== No.21 年間スケジュール ===== */
+.schedule-toolbar{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:center;
+  margin-bottom:16px;
+}
+.schedule-year{
+  font-size:18px;
+  font-weight:700;
+  color:#263f50;
+}
+.schedule-note{
+  color:#6b7881;
+  font-size:12px;
+}
+.schedule-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+.schedule-table th,
+.schedule-table td{
+  padding:11px 12px;
+  border:1px solid #aebbc4;
+  vertical-align:top;
+}
+.schedule-table thead th{
+  color:#fff;
+  background:#5b7181;
+  text-align:left;
+}
+.schedule-table tbody th{
+  width:90px;
+  color:#2f4553;
+  background:#e8edf0;
+  text-align:center;
+}
+.schedule-table td.date{
+  width:115px;
+  white-space:nowrap;
+}
+.schedule-table td.status-cell{
+  width:110px;
+  text-align:center;
+}
+.schedule-status{
+  display:inline-block;
+  min-width:68px;
+  padding:2px 8px;
+  border:1px solid #8f9da6;
+  background:#f1f3f4;
+  color:#41525e;
+  font-size:12px;
+  font-weight:700;
+}
+.schedule-status.done{
+  color:#365c46;
+  background:#e8f1eb;
+  border-color:#90ab9a;
+}
+.schedule-status.planned{
+  color:#5e5128;
+  background:#f4f0df;
+  border-color:#b8aa72;
+}
+.schedule-table tr.highlight td,
+.schedule-table tr.highlight th{
+  background:#fff9de;
+}
+.schedule-table tr.highlight th{
+  background:#e9dfad;
+}
+.schedule-subtext{
+  display:block;
+  margin-top:4px;
+  color:#6b7881;
+  font-size:12px;
+  line-height:1.6;
+}
+@media(max-width:700px){
+  .schedule-toolbar{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .schedule-table{
+    table-layout:auto;
+  }
+  .schedule-table th,
+  .schedule-table td{
+    padding:9px 8px;
+  }
+}
+
+
+/* ===== No.22 会費帳簿 ===== */
+.ledger-toolbar{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:center;
+  margin-bottom:16px;
+}
+.ledger-title{
+  font-size:18px;
+  font-weight:700;
+  color:#263f50;
+}
+.ledger-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:auto;
+}
+.ledger-table th,
+.ledger-table td{
+  padding:10px 12px;
+  border:1px solid #aebbc4;
+  vertical-align:middle;
+}
+.ledger-table thead th{
+  color:#fff;
+  background:#5b7181;
+  text-align:left;
+}
+.ledger-table tbody tr:nth-child(even) td{
+  background:#f7f9fa;
+}
+.badge-paid,
+.badge-unpaid{
+  display:inline-block;
+  min-width:62px;
+  padding:2px 8px;
+  text-align:center;
+  font-size:12px;
+  font-weight:700;
+}
+.badge-paid{
+  color:#365c46;
+  background:#e7f1eb;
+  border:1px solid #90ab9a;
+}
+.badge-unpaid{
+  color:#8a2b2b;
+  background:#f8e6e6;
+  border:1px solid #c99;
+}
+@media(max-width:700px){
+  .ledger-toolbar{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .ledger-table{
+    font-size:12px;
+  }
+  .ledger-table th,
+  .ledger-table td{
+    padding:8px 6px;
+  }
+}
