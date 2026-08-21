@@ -1632,7 +1632,7 @@ window.STORY_THREE = {
           "speaker": "",
           "text": "午前6時10分。\n美優は短い眠りから目を覚ました。",
           "character": "",
-          "background": "病室512・深夜・問題時",
+          "background": "病室512・朝",
           "se": "朝の病棟音",
           "effect": "場面転換：黒フェード",
           "intervention": "",
