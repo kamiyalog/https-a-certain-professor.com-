@@ -79,6 +79,10 @@
     male: "M",
     female: "F"
   };
+  const NARRATOR_VOICE_EXTENSION = {
+    male: "wav",
+    female: "mp3"
+  };
   const NARRATOR_SEQUENCE_META = [
     { key: "intro", group: "導入", label: "案内人との初対面", prefix: "INTRO", start: 1 },
     { key: "introYes", group: "導入", label: "選択肢「はい」の後", prefix: "INTRO", start: 8 },
@@ -363,7 +367,7 @@
     const voiceId = narratorVoiceId(key, index);
     if (!voiceId) return "";
     const guideKey = guide === "female" ? "female" : "male";
-    return `${NARRATOR_VOICE_PREFIX[guideKey]}-${voiceId}.wav`;
+    return `${NARRATOR_VOICE_PREFIX[guideKey]}-${voiceId}.${NARRATOR_VOICE_EXTENSION[guideKey]}`;
   }
 
   function updateVoiceStatus(message, state = "") {
