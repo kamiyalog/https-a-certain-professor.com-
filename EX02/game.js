@@ -71,7 +71,7 @@
     male: "もこ山モコ",
     female: "鯱子"
   };
-  const PREVIEW_GATE_ENABLED = true;
+  const PREVIEW_GATE_ENABLED = false;
   const PREVIEW_PIN = "0701";
   const PREVIEW_AUTH_KEY = "badend-preview-auth";
   const VOICE_BASE_PATH = "assets/voice";
@@ -477,7 +477,7 @@
   function showCredits() {
     openModal(
       "クレジット",
-      `案内人　男：${NARRATOR_CV.male}様\n案内人　女：${NARRATOR_CV.female}様\n\n制作：高無メイ`,
+      `案内人　男：${NARRATOR_CV.male}\n案内人　女：${NARRATOR_CV.female}\n\n制作：高無メイ`,
       [{ label: "閉じる", action: closeModal }]
     );
   }
@@ -589,15 +589,13 @@
         </div>
         <div class="chapter-footer">
           <div class="chapter-footer-tools">
-            <button class="menu-btn credit-btn" data-credits>クレジット</button>
-            <button class="menu-btn voice-review-entry" data-voice-review>ボイス確認</button>
+            <button class="menu-btn" data-credits>クレジット</button>
           </div>
           <button class="menu-btn" data-menu>メニュー</button>
         </div>
       </section>`;
     app.querySelector("[data-menu]").addEventListener("click", showMenu);
     app.querySelector("[data-credits]").addEventListener("click", showCredits);
-    app.querySelector("[data-voice-review]").addEventListener("click", showVoiceReview);
     app.querySelectorAll("[data-chapter]").forEach((button) => button.addEventListener("click", () => {
       const chapter = Number(button.dataset.chapter);
       showStoryTree(chapter);
@@ -713,11 +711,12 @@
         <div class="select-footer">
           <button class="menu-btn subtle-btn" data-back-chapters>本棚に戻る</button>
           ${hasAlteredStory ? '<span class="tree-legend"><i></i>改変された物語</span>' : ""}
-          <div class="select-footer-tools"><button class="menu-btn voice-review-entry" data-voice-review>ボイス確認</button><button class="menu-btn" data-menu>メニュー</button></div>
+<div class="select-footer-tools">
+  <button class="menu-btn" data-menu>メニュー</button>
+</div>
         </div>
       </section>`;
     app.querySelector("[data-menu]").addEventListener("click", showMenu);
-    app.querySelector("[data-voice-review]").addEventListener("click", showVoiceReview);
     app.querySelector("[data-back-chapters]").addEventListener("click", showChapterSelect);
     app.querySelectorAll("[data-story]").forEach((button) => button.addEventListener("click", () => {
       startStory(button.dataset.story);
